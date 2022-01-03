@@ -1,0 +1,4 @@
+N:/GitHub/dt047g-project/client/cmake-build-release/CMakeFiles/Client.dir
+N:/GitHub/dt047g-project/client/cmake-build-release/CMakeFiles/edit_cache.dir
+N:/GitHub/dt047g-project/client/cmake-build-release/CMakeFiles/rebuild_cache.dir
+N:/GitHub/dt047g-project/client/cmake-build-release/CMakeFiles/Client_autogen.dir

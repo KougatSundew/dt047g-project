@@ -1,0 +1,15 @@
+# ninja log v5
+5	60	0	CMakeFiles/Client_autogen	625bc1e1ed370d7b
+5	60	0	N:/GitHub/dt047g-project/client/cmake-build-debug/Client_autogen/mocs_compilation.cpp	625bc1e1ed370d7b
+5	60	0	Client_autogen/mocs_compilation.cpp	625bc1e1ed370d7b
+5	60	0	N:/GitHub/dt047g-project/client/cmake-build-debug/CMakeFiles/Client_autogen	625bc1e1ed370d7b
+340	1665	6626635042915494	CMakeFiles/Client.dir/Client_autogen/mocs_compilation.cpp.obj	873a56da9b66282b
+382	1781	6626635044095458	CMakeFiles/Client.dir/main.cpp.obj	f179fadce3d1723a
+1324	3405	6626635395575525	Client.exe	83f59c4fb4f4996a
+5	60	0	Client_autogen/include/ui_StartingWindow.h	625bc1e1ed370d7b
+148	1319	6624906655487176	CMakeFiles/Client.dir/startingwindow.cpp.obj	f2d4b8916dea3f66
+5	60	0	N:/GitHub/dt047g-project/client/cmake-build-debug/Client_autogen/include/ui_StartingWindow.h	625bc1e1ed370d7b
+1	564	6628381774426938	build.ninja	18ff51907d995942
+387	1819	6626635044485456	CMakeFiles/Client.dir/ui-components/startingwindow.cpp.obj	2bb95ed41bf11b72
+392	1653	6626635042775465	CMakeFiles/Client.dir/Client.cpp.obj	ce7a7e02074ea19d
+61	1324	6626635392415531	CMakeFiles/Client.dir/ApplicationCore.cpp.obj	da3765136a288e6d
