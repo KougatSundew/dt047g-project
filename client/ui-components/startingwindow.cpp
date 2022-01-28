@@ -8,13 +8,89 @@
 #include "startingwindow.h"
 #include "ui_StartingWindow.h"
 
-
+/**
+ * Constructor
+ * @param parent - QObject parent for signals and slots
+ */
 StartingWindow::StartingWindow(QWidget *parent) :
         QWidget(parent), ui(new Ui::StartingWindow) {
     ui->setupUi(this);
     this->setWindowFlags(Qt::FramelessWindowHint);
     ui->grpBoxLogin->hide();
-    //Sets label color styles TODO: move to .ui file instead maybe?
+
+    setStyleSettings();
+    initLoadAnimation();
+
+    connect(ui->btnLogin, &QPushButton::clicked, this, &StartingWindow::onLoginBtnPress);
+}
+/**
+ * Destructor for ui
+ */
+StartingWindow::~StartingWindow() {
+    delete ui;
+}
+
+/**
+ * Function for switching the ui to the login form
+ */
+void StartingWindow::switchToLogin() {
+    ui->grpBoxLoading->hide();
+    loadAnimation->stop();
+    ui->grpBoxLogin->show();
+}
+/**
+ * Function for switching the ui from login form to the loading window
+ */
+void StartingWindow::switchToLoading() {
+    ui->grpBoxLogin->hide();
+    loadAnimation->start();
+    ui->grpBoxLoading->show();
+}
+/**
+ * Function slot for login button pressed
+ */
+void StartingWindow::onLoginBtnPress() {
+    if(!ui->txtLineUsername->text().isEmpty() && !ui->txtLinePassword->text().isEmpty()) {
+        resetLoginStatus();
+        emit loginButtonPressed(ui->txtLineUsername->text(), ui->txtLinePassword->text());
+    } else {
+        setLoginStatus("Username or password is empty");
+    }
+}
+/**
+ * Function for setting the login status
+ * @param status - QString containing the status
+ */
+void StartingWindow::setLoginStatus(const QString &status) {
+    ui->lblStatusLogin->setText(status);
+}
+/**
+ * Function for setting the login status to empty
+ */
+void StartingWindow::resetLoginStatus() {
+    ui->lblStatusLogin->setText("");
+}
+/**
+ * Function for setting the connection status
+ * @param status - QString containing the status
+ */
+void StartingWindow::setSocketConnStatus(const QString &status) {
+    ui->lblStatus->setText(status);
+}
+/**
+ * Function for init the loader
+ */
+void StartingWindow::initLoadAnimation() {
+    //Adds a loader of type QMovie to lblLoader
+    loadAnimation = std::make_unique<QMovie>("../gif/loader.gif");
+    ui->lblLoader->setMovie(loadAnimation.get());
+    loadAnimation->start();
+}
+/**
+ * Function for setting style properties on the ui
+ */
+void StartingWindow::setStyleSettings() {
+    //Sets label color styles
     ui->lblTitle->setStyleSheet("color: white;");
     ui->lblStatus->setStyleSheet("color: white");
     ui->txtLineUsername->setStyleSheet("color: white");
@@ -22,53 +98,5 @@ StartingWindow::StartingWindow(QWidget *parent) :
     ui->lblStatusLogin->setStyleSheet("color: red");
     //Set password mode for txtLinePassword
     ui->txtLinePassword->setEchoMode(QLineEdit::Password);
-    //Adds a loader of type QMovie to lblLoader
-    loadAnimation = new QMovie("C:/Users/jolof/Downloads/45.gif");
-    ui->lblLoader->setMovie(loadAnimation);
-    loadAnimation->start();
-
-    //connect(client, &Client::connected, this, &StartingWindow::connectedToServer);
-    connect(ui->btnLogin, &QPushButton::pressed, this, &StartingWindow::onLoginBtnPress);
-    attemptConnection();
 }
 
-StartingWindow::~StartingWindow() {
-    delete ui;
-}
-
-void StartingWindow::attemptConnection() {
-
-}
-
-void StartingWindow::connectedToServer() {
-    ui->lblStatus->setText("Connected");
-}
-
-void StartingWindow::disconnectedFromServer() {
-
-}
-
-void StartingWindow::switchToLogin() {
-    ui->grpBoxLoading->hide();
-    loadAnimation->stop();
-    ui->grpBoxLogin->show();
-}
-
-void StartingWindow::switchToLoading() {
-    ui->grpBoxLogin->hide();
-    loadAnimation->start();
-    ui->grpBoxLoading->show();
-}
-
-void StartingWindow::onLoginBtnPress() {
-    std::cout << "StartingWindow btn press" << "\n";
-    emit loginButtonPressed(ui->txtLineUsername->text(), ui->txtLinePassword->text());
-}
-
-void StartingWindow::setLoginStatus(const QString &status) {
-    ui->lblStatusLogin->setText(status);
-}
-
-void StartingWindow::setSocketConnStatus(const QString &status) {
-    ui->lblStatus->setText(status);
-}

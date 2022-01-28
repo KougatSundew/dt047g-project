@@ -1,0 +1,155 @@
+\hypertarget{class_client}{}\doxysection{Client Class Reference}
+\label{class_client}\index{Client@{Client}}
+
+
+{\ttfamily \#include $<$Client.\+h$>$}
+
+Inheritance diagram for Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_client}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_client_ab16c80e824abb8afbc70c784c460af8c}{connect\+To\+Server}} (const QHost\+Address \&address, int port)
+\item 
+void \mbox{\hyperlink{class_client_a484b660517d6a610b6733bee7e96cb8c}{connect\+To\+Server}} ()
+\item 
+void \mbox{\hyperlink{class_client_a668b69c42a1f8c46424b4eff0d484e38}{write}} (const \mbox{\hyperlink{class_abstract_data}{Abstract\+Data}} \&data)
+\item 
+void \mbox{\hyperlink{class_client_a43ffca98bbbceba21e56b5af97586498}{disconnect\+From\+Server}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_client_ac2cdeb8b0249c1bf0ddd2167da861ad4}{disconnected}} ()
+\item 
+void \mbox{\hyperlink{class_client_a5f3de6434245dc99ceac8601806cb6b1}{connected}} ()
+\item 
+void \mbox{\hyperlink{class_client_af1d9e3a1cafb892bcef869dc6f982fc9}{message\+Received}} (QData\+Stream \&stream)
+\item 
+void \mbox{\hyperlink{class_client_a07e9a3cc2d00cf68b86c255de4351641}{auth\+Received}} (QData\+Stream \&stream)
+\item 
+void \mbox{\hyperlink{class_client_a2c294c1aec67be8a68b46435aa3eb940}{friend\+List\+Received}} (QData\+Stream \&stream)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_client_a4b165cbaa91e8fb11cbef6c6b952e35c}{Client}} (QObject $\ast$parent=nullptr, QHost\+Address ip=QHost\+Address\+::\+Null, int port=0)
+\item 
+void \mbox{\hyperlink{class_client_a3f6ac9034229bb5d9baf22a4fd0be98d}{abort}} ()
+\item 
+bool \mbox{\hyperlink{class_client_a49d3302c32998093ad49aefc93b931b5}{is\+Socket\+Connected}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_client_a4b165cbaa91e8fb11cbef6c6b952e35c}\label{class_client_a4b165cbaa91e8fb11cbef6c6b952e35c}} 
+\index{Client@{Client}!Client@{Client}}
+\index{Client@{Client}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{Client()}{Client()}}
+{\footnotesize\ttfamily Client\+::\+Client (\begin{DoxyParamCaption}\item[{QObject $\ast$}]{parent = {\ttfamily nullptr},  }\item[{QHost\+Address}]{ip = {\ttfamily QHostAddress\+:\+:Null},  }\item[{int}]{port = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Default constructor 
+\begin{DoxyParams}{Parameters}
+{\em parent} & -\/ QObject parent for signals \& slots \\
+\hline
+{\em ip} & -\/ type of QHost\+Address that contains the IP to the server \\
+\hline
+{\em port} & -\/ type of int that contains port number \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_client_a3f6ac9034229bb5d9baf22a4fd0be98d}\label{class_client_a3f6ac9034229bb5d9baf22a4fd0be98d}} 
+\index{Client@{Client}!abort@{abort}}
+\index{abort@{abort}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{abort()}{abort()}}
+{\footnotesize\ttfamily void Client\+::abort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that Aborts the current connection and resets the socket \mbox{\Hypertarget{class_client_a07e9a3cc2d00cf68b86c255de4351641}\label{class_client_a07e9a3cc2d00cf68b86c255de4351641}} 
+\index{Client@{Client}!authReceived@{authReceived}}
+\index{authReceived@{authReceived}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{authReceived}{authReceived}}
+{\footnotesize\ttfamily void Client\+::auth\+Received (\begin{DoxyParamCaption}\item[{QData\+Stream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_client_a5f3de6434245dc99ceac8601806cb6b1}\label{class_client_a5f3de6434245dc99ceac8601806cb6b1}} 
+\index{Client@{Client}!connected@{connected}}
+\index{connected@{connected}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{connected}{connected}}
+{\footnotesize\ttfamily void Client\+::connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_client_a484b660517d6a610b6733bee7e96cb8c}\label{class_client_a484b660517d6a610b6733bee7e96cb8c}} 
+\index{Client@{Client}!connectToServer@{connectToServer}}
+\index{connectToServer@{connectToServer}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{connectToServer}{connectToServer}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Client\+::connect\+To\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Function for connecting to server with use of member m\+\_\+ip and m\+\_\+port \mbox{\Hypertarget{class_client_ab16c80e824abb8afbc70c784c460af8c}\label{class_client_ab16c80e824abb8afbc70c784c460af8c}} 
+\index{Client@{Client}!connectToServer@{connectToServer}}
+\index{connectToServer@{connectToServer}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{connectToServer}{connectToServer}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Client\+::connect\+To\+Server (\begin{DoxyParamCaption}\item[{const QHost\+Address \&}]{address,  }\item[{int}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Function for connecting to server with IP and port 
+\begin{DoxyParams}{Parameters}
+{\em address} & -\/ QHost\+Address with IP \\
+\hline
+{\em port} & -\/ int with port \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_client_ac2cdeb8b0249c1bf0ddd2167da861ad4}\label{class_client_ac2cdeb8b0249c1bf0ddd2167da861ad4}} 
+\index{Client@{Client}!disconnected@{disconnected}}
+\index{disconnected@{disconnected}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{disconnected}{disconnected}}
+{\footnotesize\ttfamily void Client\+::disconnected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_client_a43ffca98bbbceba21e56b5af97586498}\label{class_client_a43ffca98bbbceba21e56b5af97586498}} 
+\index{Client@{Client}!disconnectFromServer@{disconnectFromServer}}
+\index{disconnectFromServer@{disconnectFromServer}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{disconnectFromServer}{disconnectFromServer}}
+{\footnotesize\ttfamily void Client\+::disconnect\+From\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Function for disconnecting the socket \mbox{\Hypertarget{class_client_a2c294c1aec67be8a68b46435aa3eb940}\label{class_client_a2c294c1aec67be8a68b46435aa3eb940}} 
+\index{Client@{Client}!friendListReceived@{friendListReceived}}
+\index{friendListReceived@{friendListReceived}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{friendListReceived}{friendListReceived}}
+{\footnotesize\ttfamily void Client\+::friend\+List\+Received (\begin{DoxyParamCaption}\item[{QData\+Stream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_client_a49d3302c32998093ad49aefc93b931b5}\label{class_client_a49d3302c32998093ad49aefc93b931b5}} 
+\index{Client@{Client}!isSocketConnected@{isSocketConnected}}
+\index{isSocketConnected@{isSocketConnected}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{isSocketConnected()}{isSocketConnected()}}
+{\footnotesize\ttfamily bool Client\+::is\+Socket\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function for checking the connection \begin{DoxyReturn}{Returns}
+-\/ returns boolean that can be true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_client_af1d9e3a1cafb892bcef869dc6f982fc9}\label{class_client_af1d9e3a1cafb892bcef869dc6f982fc9}} 
+\index{Client@{Client}!messageReceived@{messageReceived}}
+\index{messageReceived@{messageReceived}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{messageReceived}{messageReceived}}
+{\footnotesize\ttfamily void Client\+::message\+Received (\begin{DoxyParamCaption}\item[{QData\+Stream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_client_a668b69c42a1f8c46424b4eff0d484e38}\label{class_client_a668b69c42a1f8c46424b4eff0d484e38}} 
+\index{Client@{Client}!write@{write}}
+\index{write@{write}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{write}{write}}
+{\footnotesize\ttfamily void Client\+::write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_abstract_data}{Abstract\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Function for sending data with \mbox{\hyperlink{class_abstract_data}{Abstract\+Data}} 
+\begin{DoxyParams}{Parameters}
+{\em data} & -\/ type of \mbox{\hyperlink{class_abstract_data}{Abstract\+Data}} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/\mbox{\hyperlink{_client_8h}{Client.\+h}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/\mbox{\hyperlink{_client_8cpp}{Client.\+cpp}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/cmake-\/build-\/debug/\+Client\+\_\+autogen/\+EWIEGA46\+WW/\mbox{\hyperlink{cmake-build-debug_2_client__autogen_2_e_w_i_e_g_a46_w_w_2moc___client_8cpp}{moc\+\_\+\+Client.\+cpp}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/cmake-\/build-\/release/\+Client\+\_\+autogen/\+EWIEGA46\+WW/\mbox{\hyperlink{cmake-build-release_2_client__autogen_2_e_w_i_e_g_a46_w_w_2moc___client_8cpp}{moc\+\_\+\+Client.\+cpp}}\end{DoxyCompactItemize}

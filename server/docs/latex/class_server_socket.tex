@@ -1,0 +1,117 @@
+\hypertarget{class_server_socket}{}\doxysection{Server\+Socket Class Reference}
+\label{class_server_socket}\index{ServerSocket@{ServerSocket}}
+
+
+{\ttfamily \#include $<$Server\+Socket.\+h$>$}
+
+Inheritance diagram for Server\+Socket\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_server_socket}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_server_socket_a5cd81592734b1414bf8ca09e69ef5068}{disconnect\+From\+Client}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_server_socket_a1cfeceaccace1488003eb0f007a9d39d}{disconnected\+From\+Client}} ()
+\item 
+void \mbox{\hyperlink{class_server_socket_a63888bca4dc900a4b57b1a2c91e27bdb}{message\+Received}} (\mbox{\hyperlink{class_server_socket}{Server\+Socket}} $\ast$sender\+Socket, QData\+Stream \&stream)
+\item 
+void \mbox{\hyperlink{class_server_socket_a5dfd449d34275fae7b193e81c6fa5381}{log\+Message}} (const QString \&msg)
+\item 
+void \mbox{\hyperlink{class_server_socket_a8db372def6fedfab48e53bb9855c3c02}{auth\+Received}} (\mbox{\hyperlink{class_server_socket}{Server\+Socket}} $\ast$socket, QData\+Stream \&stream)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_server_socket_a17f872bc581254fe3ae9a3a48cc01064}{Server\+Socket}} (QObject $\ast$parent=nullptr)
+\item 
+virtual bool \mbox{\hyperlink{class_server_socket_a13c5eea8e332338780b63d73a79fd5f6}{set\+Socket\+Descriptor}} (qintptr socket\+Descriptor)
+\item 
+void \mbox{\hyperlink{class_server_socket_a60664765242ce44f39bcd9bc758546f2}{write}} (const \mbox{\hyperlink{class_abstract_data}{Abstract\+Data}} \&data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_server_socket_a17f872bc581254fe3ae9a3a48cc01064}\label{class_server_socket_a17f872bc581254fe3ae9a3a48cc01064}} 
+\index{ServerSocket@{ServerSocket}!ServerSocket@{ServerSocket}}
+\index{ServerSocket@{ServerSocket}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{ServerSocket()}{ServerSocket()}}
+{\footnotesize\ttfamily Server\+Socket\+::\+Server\+Socket (\begin{DoxyParamCaption}\item[{QObject $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em parent} & -\/ QObject parent for signals / slots \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_server_socket_a8db372def6fedfab48e53bb9855c3c02}\label{class_server_socket_a8db372def6fedfab48e53bb9855c3c02}} 
+\index{ServerSocket@{ServerSocket}!authReceived@{authReceived}}
+\index{authReceived@{authReceived}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{authReceived}{authReceived}}
+{\footnotesize\ttfamily void Server\+Socket\+::auth\+Received (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_server_socket}{Server\+Socket}} $\ast$}]{socket,  }\item[{QData\+Stream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_server_socket_a1cfeceaccace1488003eb0f007a9d39d}\label{class_server_socket_a1cfeceaccace1488003eb0f007a9d39d}} 
+\index{ServerSocket@{ServerSocket}!disconnectedFromClient@{disconnectedFromClient}}
+\index{disconnectedFromClient@{disconnectedFromClient}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{disconnectedFromClient}{disconnectedFromClient}}
+{\footnotesize\ttfamily void Server\+Socket\+::disconnected\+From\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_server_socket_a5cd81592734b1414bf8ca09e69ef5068}\label{class_server_socket_a5cd81592734b1414bf8ca09e69ef5068}} 
+\index{ServerSocket@{ServerSocket}!disconnectFromClient@{disconnectFromClient}}
+\index{disconnectFromClient@{disconnectFromClient}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{disconnectFromClient}{disconnectFromClient}}
+{\footnotesize\ttfamily void Server\+Socket\+::disconnect\+From\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Function for disconnecting the socket \mbox{\Hypertarget{class_server_socket_a5dfd449d34275fae7b193e81c6fa5381}\label{class_server_socket_a5dfd449d34275fae7b193e81c6fa5381}} 
+\index{ServerSocket@{ServerSocket}!logMessage@{logMessage}}
+\index{logMessage@{logMessage}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{logMessage}{logMessage}}
+{\footnotesize\ttfamily void Server\+Socket\+::log\+Message (\begin{DoxyParamCaption}\item[{const QString \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_server_socket_a63888bca4dc900a4b57b1a2c91e27bdb}\label{class_server_socket_a63888bca4dc900a4b57b1a2c91e27bdb}} 
+\index{ServerSocket@{ServerSocket}!messageReceived@{messageReceived}}
+\index{messageReceived@{messageReceived}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{messageReceived}{messageReceived}}
+{\footnotesize\ttfamily void Server\+Socket\+::message\+Received (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_server_socket}{Server\+Socket}} $\ast$}]{sender\+Socket,  }\item[{QData\+Stream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_server_socket_a13c5eea8e332338780b63d73a79fd5f6}\label{class_server_socket_a13c5eea8e332338780b63d73a79fd5f6}} 
+\index{ServerSocket@{ServerSocket}!setSocketDescriptor@{setSocketDescriptor}}
+\index{setSocketDescriptor@{setSocketDescriptor}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{setSocketDescriptor()}{setSocketDescriptor()}}
+{\footnotesize\ttfamily bool Server\+Socket\+::set\+Socket\+Descriptor (\begin{DoxyParamCaption}\item[{qintptr}]{socket\+Descriptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function for setting the socketdescriptor 
+\begin{DoxyParams}{Parameters}
+{\em socket\+Descriptor} & -\/ type qintptr socketdescriptor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ returns the socketdescriptor of the socket 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_server_socket_a60664765242ce44f39bcd9bc758546f2}\label{class_server_socket_a60664765242ce44f39bcd9bc758546f2}} 
+\index{ServerSocket@{ServerSocket}!write@{write}}
+\index{write@{write}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Server\+Socket\+::write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_abstract_data}{Abstract\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+Function for sending data to socket 
+\begin{DoxyParams}{Parameters}
+{\em data} & -\/ const reference \mbox{\hyperlink{class_abstract_data}{Abstract\+Data}} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+N\+:/\+Git\+Hub/dt047g-\/project/server/\mbox{\hyperlink{_server_socket_8h}{Server\+Socket.\+h}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/server/cmake-\/build-\/debug/server\+\_\+autogen/\+EWIEGA46\+WW/\mbox{\hyperlink{cmake-build-debug_2server__autogen_2_e_w_i_e_g_a46_w_w_2moc___server_socket_8cpp}{moc\+\_\+\+Server\+Socket.\+cpp}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/server/cmake-\/build-\/release/server\+\_\+autogen/\+EWIEGA46\+WW/\mbox{\hyperlink{cmake-build-release_2server__autogen_2_e_w_i_e_g_a46_w_w_2moc___server_socket_8cpp}{moc\+\_\+\+Server\+Socket.\+cpp}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/server/\mbox{\hyperlink{_server_socket_8cpp}{Server\+Socket.\+cpp}}\end{DoxyCompactItemize}

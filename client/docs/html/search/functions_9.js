@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['main_0',['main',['../cmake-build-debug_2_c_make_files_23_821_81_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../cmake-build-debug_2_c_make_files_23_821_81_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp'],['../cmake-build-release_2_c_make_files_23_821_81_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../cmake-build-release_2_c_make_files_23_821_81_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp'],['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp']]],
+  ['mainapplicationwindow_1',['MainApplicationWindow',['../class_main_application_window.html#a7aa741938892067c0287f13259e2cd2e',1,'MainApplicationWindow']]],
+  ['message_2',['Message',['../class_message.html#a4e0c3e0a2be25186519ba075d7851b71',1,'Message::Message()=default'],['../class_message.html#ac3e7e818b4511f3512bffaa5f3b712fb',1,'Message::Message(const QString &amp;sender, const QString &amp;receiver, const QString &amp;message)']]],
+  ['messagelist_3',['MessageList',['../class_message_list.html#a2bf0246e8f2534c1f7159ae6507cf0d8',1,'MessageList::MessageList()=default'],['../class_message_list.html#af68ccd9d5248d326e4f47168def1bbff',1,'MessageList::MessageList(QVector&lt; class Message &gt; messages)']]],
+  ['messagereceived_4',['messageReceived',['../class_client.html#af1d9e3a1cafb892bcef869dc6f982fc9',1,'Client']]]
+];

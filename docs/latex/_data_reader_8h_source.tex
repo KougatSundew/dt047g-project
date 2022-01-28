@@ -1,0 +1,56 @@
+\hypertarget{_data_reader_8h_source}{}\doxysection{Data\+Reader.\+h}
+\label{_data_reader_8h_source}\index{N:/GitHub/dt047g-\/project/server/data/DataReader.h@{N:/GitHub/dt047g-\/project/server/data/DataReader.h}}
+\mbox{\hyperlink{_data_reader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by jolof on 2022-\/01-\/06.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef SERVER\_DATAREADER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define SERVER\_DATAREADER\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <QDataStream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <QFile>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}../datatypes/User.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}../datatypes/FriendList.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}../datatypes/MessageList.h"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{enum} \mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7}{TypeOfData}} \{}
+\DoxyCodeLine{17     \mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7afb1476568969c3f6714f8cd55d2aaadb}{RegisteredUsers}},}
+\DoxyCodeLine{18     \mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7a4bc3e4b9736db42f302d82784a33bd46}{Groups}},}
+\DoxyCodeLine{19     \mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7af98366cd51e8db542e2fab174c56c3c1}{UserJoinedGroups}},}
+\DoxyCodeLine{20     \mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7a53c3f558aa03471cda410a77982148b6}{Friends}},}
+\DoxyCodeLine{21     \mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7a87393c3e48abb144132c9006021976df}{UserMessages}},}
+\DoxyCodeLine{22     \mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7af9cc0c6ee2a889df88942f9bc11f9ef5}{GroupMessages}}}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{class }\mbox{\hyperlink{class_data_reader}{DataReader}} \{}
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_data_reader_ab9c8558242d6739e2fec90c6e493e91e}{DataReader}}();}
+\DoxyCodeLine{28     std::map<QString, User> \mbox{\hyperlink{class_data_reader_a6d773eb951c2e7fff091a983e566a551}{getRegisteredUsers}}();}
+\DoxyCodeLine{29     QMap<QString, class FriendList> \mbox{\hyperlink{class_data_reader_ac5c2dc46d25ad149b8ae36a710666d3c}{getFriendLists}}();}
+\DoxyCodeLine{30     \textcolor{keyword}{class }\mbox{\hyperlink{class_message_list}{MessageList}} \mbox{\hyperlink{class_data_reader_ad0a45e4dda1623f4352111aa443c3e83}{getMessages}}();}
+\DoxyCodeLine{31 \textcolor{keyword}{private}:}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} loadMessages();}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} loadRegisteredUsers();}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} loadFriendLists();}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} read(\mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7}{TypeOfData}});}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     std::map<QString, User> registeredUsers;}
+\DoxyCodeLine{38     QMap<QString, class FriendList> friendLists;}
+\DoxyCodeLine{39     \textcolor{keyword}{class }\mbox{\hyperlink{class_message_list}{MessageList}} messageList;}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     QFile fileRegisteredUsers;}
+\DoxyCodeLine{42     QFile fileGroups;}
+\DoxyCodeLine{43     QFile fileJoinedGroups;}
+\DoxyCodeLine{44     QFile fileFriends;}
+\DoxyCodeLine{45     QFile fileUserMessages;}
+\DoxyCodeLine{46     QFile fileGroupMessages;}
+\DoxyCodeLine{47 \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//SERVER\_DATAREADER\_H}}
+
+\end{DoxyCode}

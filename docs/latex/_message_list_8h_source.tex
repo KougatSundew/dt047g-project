@@ -1,0 +1,39 @@
+\hypertarget{_message_list_8h_source}{}\doxysection{Message\+List.\+h}
+\label{_message_list_8h_source}\index{N:/GitHub/dt047g-\/project/server/datatypes/MessageList.h@{N:/GitHub/dt047g-\/project/server/datatypes/MessageList.h}}
+\mbox{\hyperlink{_message_list_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by jolof on 2022-\/01-\/06.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef SERVER\_MESSAGELIST\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define SERVER\_MESSAGELIST\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_abstract_data_8h}{AbstractData.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_message_8h}{Message.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <QVector>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_message_list}{MessageList}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_abstract_data}{AbstractData}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_message_list_a2bf0246e8f2534c1f7159ae6507cf0d8}{MessageList}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{15     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_message_list_a2bf0246e8f2534c1f7159ae6507cf0d8}{MessageList}}(QVector<class Message> messages);}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_message_list_aa678dd0998e2042ff445e71c8c782172}{add}}(\textcolor{keyword}{class} \mbox{\hyperlink{class_message}{Message}} msg);}
+\DoxyCodeLine{18     QDataStream\& \mbox{\hyperlink{class_message_list_a6da9b5fe163393c7e972dec8992bb97a}{toStream}}(QDataStream \&stream) \textcolor{keyword}{const override};}
+\DoxyCodeLine{19     QDataStream\& \mbox{\hyperlink{class_message_list_a24fd93d7c0fbe28ba25cd158b50c12ff}{fromStream}}(QDataStream \&stream) \textcolor{keyword}{override};}
+\DoxyCodeLine{20     \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{DataType}} \mbox{\hyperlink{class_message_list_aa2a9eef321f6ee7bcfa652d72766ce37}{type}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_message_list_a6af065ebcd91d1c5201fbe5beca2ea46}{size}}();}
+\DoxyCodeLine{23     QVector<class Message>::iterator \mbox{\hyperlink{class_message_list_aedaee77ed16594e26a54e6843f8e0135}{begin}}();}
+\DoxyCodeLine{24     QVector<class Message>::iterator \mbox{\hyperlink{class_message_list_a7685d0aef4297bbc01ed548e6e63d124}{end}}();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     QVector<class Message> \mbox{\hyperlink{class_message_list_ab3895225315ca4f273af05ab4b1fb977}{getMessages}}();}
+\DoxyCodeLine{27     QVector<class Message> \mbox{\hyperlink{class_message_list_a17939e23ceffa4287a7f2e58ad793815}{getMessageFromUser}}(QString sender, QString receiver);}
+\DoxyCodeLine{28 \textcolor{keyword}{private}:}
+\DoxyCodeLine{29     QVector<class Message> messages;}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//SERVER\_MESSAGELIST\_H}}
+
+\end{DoxyCode}

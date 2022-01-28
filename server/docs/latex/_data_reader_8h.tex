@@ -1,0 +1,64 @@
+\hypertarget{_data_reader_8h}{}\doxysection{N\+:/\+Git\+Hub/dt047g-\/project/server/data/\+Data\+Reader.h File Reference}
+\label{_data_reader_8h}\index{N:/GitHub/dt047g-\/project/server/data/DataReader.h@{N:/GitHub/dt047g-\/project/server/data/DataReader.h}}
+{\ttfamily \#include $<$QData\+Stream$>$}\newline
+{\ttfamily \#include $<$QText\+Stream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$QFile$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \char`\"{}../datatypes/\+User.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../datatypes/\+Friend\+List.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../datatypes/\+Message\+List.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_data_reader}{Data\+Reader}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7}{Type\+Of\+Data}} \{ \newline
+\mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7afb1476568969c3f6714f8cd55d2aaadb}{Registered\+Users}}
+, \mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7a4bc3e4b9736db42f302d82784a33bd46}{Groups}}
+, \mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7af98366cd51e8db542e2fab174c56c3c1}{User\+Joined\+Groups}}
+, \mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7a53c3f558aa03471cda410a77982148b6}{Friends}}
+, \newline
+\mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7a87393c3e48abb144132c9006021976df}{User\+Messages}}
+, \mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7af9cc0c6ee2a889df88942f9bc11f9ef5}{Group\+Messages}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7}\label{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7}} 
+\index{DataReader.h@{DataReader.h}!TypeOfData@{TypeOfData}}
+\index{TypeOfData@{TypeOfData}!DataReader.h@{DataReader.h}}
+\doxysubsubsection{\texorpdfstring{TypeOfData}{TypeOfData}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7}{Type\+Of\+Data}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RegisteredUsers@{RegisteredUsers}!DataReader.h@{DataReader.h}}\index{DataReader.h@{DataReader.h}!RegisteredUsers@{RegisteredUsers}}}\mbox{\Hypertarget{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7afb1476568969c3f6714f8cd55d2aaadb}\label{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7afb1476568969c3f6714f8cd55d2aaadb}} 
+Registered\+Users&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Groups@{Groups}!DataReader.h@{DataReader.h}}\index{DataReader.h@{DataReader.h}!Groups@{Groups}}}\mbox{\Hypertarget{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7a4bc3e4b9736db42f302d82784a33bd46}\label{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7a4bc3e4b9736db42f302d82784a33bd46}} 
+Groups&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UserJoinedGroups@{UserJoinedGroups}!DataReader.h@{DataReader.h}}\index{DataReader.h@{DataReader.h}!UserJoinedGroups@{UserJoinedGroups}}}\mbox{\Hypertarget{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7af98366cd51e8db542e2fab174c56c3c1}\label{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7af98366cd51e8db542e2fab174c56c3c1}} 
+User\+Joined\+Groups&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Friends@{Friends}!DataReader.h@{DataReader.h}}\index{DataReader.h@{DataReader.h}!Friends@{Friends}}}\mbox{\Hypertarget{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7a53c3f558aa03471cda410a77982148b6}\label{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7a53c3f558aa03471cda410a77982148b6}} 
+Friends&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UserMessages@{UserMessages}!DataReader.h@{DataReader.h}}\index{DataReader.h@{DataReader.h}!UserMessages@{UserMessages}}}\mbox{\Hypertarget{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7a87393c3e48abb144132c9006021976df}\label{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7a87393c3e48abb144132c9006021976df}} 
+User\+Messages&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GroupMessages@{GroupMessages}!DataReader.h@{DataReader.h}}\index{DataReader.h@{DataReader.h}!GroupMessages@{GroupMessages}}}\mbox{\Hypertarget{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7af9cc0c6ee2a889df88942f9bc11f9ef5}\label{_data_reader_8h_aa98fe8b08bb54bb9091d0d92aa9d93e7af9cc0c6ee2a889df88942f9bc11f9ef5}} 
+Group\+Messages&\\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,39 @@
+\hypertarget{_auth_answer_8h_source}{}\doxysection{Auth\+Answer.\+h}
+\label{_auth_answer_8h_source}\index{N:/GitHub/dt047g-\/project/server/datatypes/AuthAnswer.h@{N:/GitHub/dt047g-\/project/server/datatypes/AuthAnswer.h}}
+\mbox{\hyperlink{_auth_answer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Chatter, Programmeringsmetodik (DT047G)}}
+\DoxyCodeLine{3 \textcolor{comment}{// Joel Olofsson (jool1904)}}
+\DoxyCodeLine{4 \textcolor{comment}{// AuthAnswer.h, 2022-\/01-\/04 -\/ 2022-\/01-\/13}}
+\DoxyCodeLine{5 \textcolor{comment}{// Contains the header definitions}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Created by jolof on 2022-\/01-\/04.}}
+\DoxyCodeLine{10 \textcolor{comment}{//}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef CLIENT\_AUTHANSWER\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define CLIENT\_AUTHANSWER\_H}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_abstract_data_8h}{AbstractData.h}}"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_auth_answer}{AuthAnswer}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_abstract_data}{AbstractData}} \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_auth_answer_a3d9f4a2c5d598727b07a7d6c41e2f6cf}{AuthAnswer}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{19     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_auth_answer_a73a25dbaee4b90e01a40d4c0d7fa3d24}{AuthAnswer}}(\textcolor{keywordtype}{bool} isSignedIn): isSignedIn(isSignedIn) \{\};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     QDataStream\& \mbox{\hyperlink{class_auth_answer_a6c5a471473147699280772f460b67846}{toStream}}(QDataStream \&stream) \textcolor{keyword}{const override};}
+\DoxyCodeLine{22     QDataStream\& \mbox{\hyperlink{class_auth_answer_a39168c9c303e4649e4d67b52ed73f9e2}{fromStream}}(QDataStream \&stream) \textcolor{keyword}{override};}
+\DoxyCodeLine{23     [[nodiscard]] \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{DataType}} \mbox{\hyperlink{class_auth_answer_a44a608696e8896c848ae56140a4df258}{type}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     [[nodiscard]] \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_auth_answer_a06a460079d41910e49c5172a7c9b402b}{isSigned}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_auth_answer_a109097f236a7864c774ee7cd1a294d1e}{setSigned}}(\textcolor{keywordtype}{bool} isSignedIn);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{private}:}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool} isSignedIn;}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CLIENT\_AUTHANSWER\_H}}
+
+\end{DoxyCode}

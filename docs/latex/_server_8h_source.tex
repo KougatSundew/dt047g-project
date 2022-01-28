@@ -1,0 +1,54 @@
+\hypertarget{_server_8h_source}{}\doxysection{Server.\+h}
+\label{_server_8h_source}\index{N:/GitHub/dt047g-\/project/server/Server.h@{N:/GitHub/dt047g-\/project/server/Server.h}}
+\mbox{\hyperlink{_server_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by jolof on 2021-\/12-\/21.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef SERVER\_SERVER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define SERVER\_SERVER\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <QObject>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <QTcpServer>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <QTcpSocket>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_server_socket_8h}{ServerSocket.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_auth_answer_8h}{datatypes/AuthAnswer.h}}"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_message_8h}{datatypes/Message.h}}"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_user_8h}{datatypes/User.h}}"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_data_reader_8h}{data/DataReader.h}}"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_friend_list_8h}{datatypes/FriendList.h}}"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_data_printer_8h}{data/DataPrinter.h}}"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{class }\mbox{\hyperlink{class_server}{Server}} : \textcolor{keyword}{public} QTcpServer \{}
+\DoxyCodeLine{24     Q\_OBJECT}
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_server_aaf98d5194faee831c6340cc736b9b879}{Server}}(QObject *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_a54385cd913ed0c85c4254b6fbf81d3ab}{logMessage}}(\textcolor{keyword}{const} QString \&msg);}
+\DoxyCodeLine{29 \textcolor{keyword}{public} slots:}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_a8a5e1567cc4c638e9e5a848d601de908}{readyRead}}();}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_a66e7b75873e4b75cdbf08acc30907338}{disconnected}}();}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_aa229a1587514197693274aa0d589344b}{incomingConnection}}(qintptr socketDescriptor) \textcolor{keyword}{override};}
+\DoxyCodeLine{33 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} clientDisconnected(\mbox{\hyperlink{class_server_socket}{ServerSocket}} *sender);}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} messageReceived(\mbox{\hyperlink{class_server_socket}{ServerSocket}} *senderSocket, QDataStream \&stream);}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} authMessageReceived(\mbox{\hyperlink{class_server_socket}{ServerSocket}} *socket, QDataStream \&stream);}
+\DoxyCodeLine{37 \textcolor{keyword}{private}:}
+\DoxyCodeLine{43     \textcolor{keywordtype}{bool} userExists(\mbox{\hyperlink{class_user}{User}} userdata);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{comment}{//TODO: change vector to store unique\_ptr for ServerSocket instead of regular pointers to ServerSocket}}
+\DoxyCodeLine{46     QMap<User, ServerSocket*> clients;}
+\DoxyCodeLine{47     std::map<QString, User> usersRegistered;}
+\DoxyCodeLine{48     QMap<QString, class FriendList> friendLists;}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//SERVER\_SERVER\_H}}
+
+\end{DoxyCode}

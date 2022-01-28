@@ -1,0 +1,165 @@
+\hypertarget{class_message}{}\doxysection{Message Class Reference}
+\label{class_message}\index{Message@{Message}}
+
+
+{\ttfamily \#include $<$Message.\+h$>$}
+
+Inheritance diagram for Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_message}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_message_a4e0c3e0a2be25186519ba075d7851b71}{Message}} ()=default
+\item 
+\mbox{\hyperlink{class_message_ac3e7e818b4511f3512bffaa5f3b712fb}{Message}} (const QString \&sender, const QString \&receiver, const QString \&message)
+\item 
+virtual QData\+Stream \& \mbox{\hyperlink{class_message_a98993a14a7a727c9c75e067bd8735374}{to\+Stream}} (QData\+Stream \&stream) const override
+\item 
+virtual QData\+Stream \& \mbox{\hyperlink{class_message_a0194170593f739ed8cbfdfbe9accb244}{from\+Stream}} (QData\+Stream \&stream) override
+\item 
+virtual \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{Data\+Type}} \mbox{\hyperlink{class_message_adf06911ff487020cd9416cb01f00fbf2}{type}} () const override
+\item 
+QText\+Stream \& \mbox{\hyperlink{class_message_a5c65ae96fae1a76fe5f8e9a93aac394a}{to\+Stream}} (QText\+Stream \&stream) const
+\item 
+QText\+Stream \& \mbox{\hyperlink{class_message_ade20aa3f7c91435db92f018808495d01}{from\+Stream}} (QText\+Stream \&stream)
+\item 
+void \mbox{\hyperlink{class_message_a5f848a38d7fa4e7cca49887a9567dc90}{set\+Sender}} (const QString \&sender)
+\item 
+void \mbox{\hyperlink{class_message_a912ccb7af7863f4d9f30deebb9ed2d73}{set\+Receiver}} (const QString \&receiver)
+\item 
+void \mbox{\hyperlink{class_message_af2f74d1087265cb42b4857fa921ee394}{set\+Message}} (const QString \&message)
+\item 
+QString \mbox{\hyperlink{class_message_af512b41449d2ae54fb90d309991f7b50}{get\+Sender}} () const
+\item 
+QString \mbox{\hyperlink{class_message_af293ca36182c170033590cb05bf63e13}{get\+Receiver}} () const
+\item 
+QString \mbox{\hyperlink{class_message_a5b5a717e3ce85f99f7d96c4936a839cb}{get\+Message}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+QText\+Stream \& \mbox{\hyperlink{class_message_ac1f0a57c88baaa2d0b997d36e7a5641d}{operator$>$$>$}} (QText\+Stream \&stream, class \mbox{\hyperlink{class_message}{Message}} \&data)
+\item 
+QText\+Stream \& \mbox{\hyperlink{class_message_af5b8364b1ca87ec7353aeac62cb123dc}{operator$<$$<$}} (QText\+Stream \&stream, const class \mbox{\hyperlink{class_message}{Message}} \&data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_message_a4e0c3e0a2be25186519ba075d7851b71}\label{class_message_a4e0c3e0a2be25186519ba075d7851b71}} 
+\index{Message@{Message}!Message@{Message}}
+\index{Message@{Message}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Message\+::\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_message_ac3e7e818b4511f3512bffaa5f3b712fb}\label{class_message_ac3e7e818b4511f3512bffaa5f3b712fb}} 
+\index{Message@{Message}!Message@{Message}}
+\index{Message@{Message}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Message\+::\+Message (\begin{DoxyParamCaption}\item[{const QString \&}]{sender,  }\item[{const QString \&}]{receiver,  }\item[{const QString \&}]{message }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_message_a0194170593f739ed8cbfdfbe9accb244}\label{class_message_a0194170593f739ed8cbfdfbe9accb244}} 
+\index{Message@{Message}!fromStream@{fromStream}}
+\index{fromStream@{fromStream}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{fromStream()}{fromStream()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily QData\+Stream \& Message\+::from\+Stream (\begin{DoxyParamCaption}\item[{QData\+Stream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_abstract_data_a0084a715ed7aa36c622be557c66694bf}{Abstract\+Data}}.
+
+\mbox{\Hypertarget{class_message_ade20aa3f7c91435db92f018808495d01}\label{class_message_ade20aa3f7c91435db92f018808495d01}} 
+\index{Message@{Message}!fromStream@{fromStream}}
+\index{fromStream@{fromStream}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{fromStream()}{fromStream()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily QText\+Stream \& Message\+::from\+Stream (\begin{DoxyParamCaption}\item[{QText\+Stream \&}]{stream }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_message_a5b5a717e3ce85f99f7d96c4936a839cb}\label{class_message_a5b5a717e3ce85f99f7d96c4936a839cb}} 
+\index{Message@{Message}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getMessage()}{getMessage()}}
+{\footnotesize\ttfamily QString Message\+::get\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_message_af293ca36182c170033590cb05bf63e13}\label{class_message_af293ca36182c170033590cb05bf63e13}} 
+\index{Message@{Message}!getReceiver@{getReceiver}}
+\index{getReceiver@{getReceiver}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getReceiver()}{getReceiver()}}
+{\footnotesize\ttfamily QString Message\+::get\+Receiver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_message_af512b41449d2ae54fb90d309991f7b50}\label{class_message_af512b41449d2ae54fb90d309991f7b50}} 
+\index{Message@{Message}!getSender@{getSender}}
+\index{getSender@{getSender}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getSender()}{getSender()}}
+{\footnotesize\ttfamily QString Message\+::get\+Sender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_message_af2f74d1087265cb42b4857fa921ee394}\label{class_message_af2f74d1087265cb42b4857fa921ee394}} 
+\index{Message@{Message}!setMessage@{setMessage}}
+\index{setMessage@{setMessage}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{setMessage()}{setMessage()}}
+{\footnotesize\ttfamily void Message\+::set\+Message (\begin{DoxyParamCaption}\item[{const QString \&}]{message }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_message_a912ccb7af7863f4d9f30deebb9ed2d73}\label{class_message_a912ccb7af7863f4d9f30deebb9ed2d73}} 
+\index{Message@{Message}!setReceiver@{setReceiver}}
+\index{setReceiver@{setReceiver}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{setReceiver()}{setReceiver()}}
+{\footnotesize\ttfamily void Message\+::set\+Receiver (\begin{DoxyParamCaption}\item[{const QString \&}]{receiver }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_message_a5f848a38d7fa4e7cca49887a9567dc90}\label{class_message_a5f848a38d7fa4e7cca49887a9567dc90}} 
+\index{Message@{Message}!setSender@{setSender}}
+\index{setSender@{setSender}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{setSender()}{setSender()}}
+{\footnotesize\ttfamily void Message\+::set\+Sender (\begin{DoxyParamCaption}\item[{const QString \&}]{sender }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_message_a98993a14a7a727c9c75e067bd8735374}\label{class_message_a98993a14a7a727c9c75e067bd8735374}} 
+\index{Message@{Message}!toStream@{toStream}}
+\index{toStream@{toStream}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{toStream()}{toStream()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily QData\+Stream \& Message\+::to\+Stream (\begin{DoxyParamCaption}\item[{QData\+Stream \&}]{stream }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_abstract_data_a670be4481a377f9686a7fc108ced3458}{Abstract\+Data}}.
+
+\mbox{\Hypertarget{class_message_a5c65ae96fae1a76fe5f8e9a93aac394a}\label{class_message_a5c65ae96fae1a76fe5f8e9a93aac394a}} 
+\index{Message@{Message}!toStream@{toStream}}
+\index{toStream@{toStream}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{toStream()}{toStream()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily QText\+Stream \& Message\+::to\+Stream (\begin{DoxyParamCaption}\item[{QText\+Stream \&}]{stream }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_message_adf06911ff487020cd9416cb01f00fbf2}\label{class_message_adf06911ff487020cd9416cb01f00fbf2}} 
+\index{Message@{Message}!type@{type}}
+\index{type@{type}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{Data\+Type}} Message\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_abstract_data_ad03856778da3fafd0610017140790381}{Abstract\+Data}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_message_af5b8364b1ca87ec7353aeac62cb123dc}\label{class_message_af5b8364b1ca87ec7353aeac62cb123dc}} 
+\index{Message@{Message}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily QText\+Stream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{QText\+Stream \&}]{stream,  }\item[{const class \mbox{\hyperlink{class_message}{Message}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_message_ac1f0a57c88baaa2d0b997d36e7a5641d}\label{class_message_ac1f0a57c88baaa2d0b997d36e7a5641d}} 
+\index{Message@{Message}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily QText\+Stream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{QText\+Stream \&}]{stream,  }\item[{class \mbox{\hyperlink{class_message}{Message}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/data/\mbox{\hyperlink{_message_8h}{Message.\+h}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/data/\mbox{\hyperlink{_message_8cpp}{Message.\+cpp}}\end{DoxyCompactItemize}

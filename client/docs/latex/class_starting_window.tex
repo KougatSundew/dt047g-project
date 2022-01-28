@@ -1,0 +1,111 @@
+\hypertarget{class_starting_window}{}\doxysection{Starting\+Window Class Reference}
+\label{class_starting_window}\index{StartingWindow@{StartingWindow}}
+
+
+{\ttfamily \#include $<$startingwindow.\+h$>$}
+
+Inheritance diagram for Starting\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_starting_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_starting_window_a88b1f62ad06a2e72ae26b4fee0c5c519}{login\+Button\+Pressed}} (QString username, QString password)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_starting_window_a7e66f6f4202d43a0c4aa59628b75bee8}{Starting\+Window}} (QWidget $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{class_starting_window_adc42244c03e210774ee58a2b5816cc37}{$\sim$\+Starting\+Window}} () override
+\item 
+void \mbox{\hyperlink{class_starting_window_abf6f47bb622a1a39819732c3cab494a9}{switch\+To\+Login}} ()
+\item 
+void \mbox{\hyperlink{class_starting_window_a4a6b77f2460e4a1a922a10cc173e1b70}{switch\+To\+Loading}} ()
+\item 
+void \mbox{\hyperlink{class_starting_window_adcb68cb4ebd49053b1c4c03ff436df99}{set\+Login\+Status}} (const QString \&status)
+\item 
+void \mbox{\hyperlink{class_starting_window_a79fa1a31f49f6afb5b6844fbb9256b70}{set\+Socket\+Conn\+Status}} (const QString \&status)
+\item 
+void \mbox{\hyperlink{class_starting_window_a38fd9c4a76f7dfd3464931cd30497875}{reset\+Login\+Status}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_starting_window_a7e66f6f4202d43a0c4aa59628b75bee8}\label{class_starting_window_a7e66f6f4202d43a0c4aa59628b75bee8}} 
+\index{StartingWindow@{StartingWindow}!StartingWindow@{StartingWindow}}
+\index{StartingWindow@{StartingWindow}!StartingWindow@{StartingWindow}}
+\doxysubsubsection{\texorpdfstring{StartingWindow()}{StartingWindow()}}
+{\footnotesize\ttfamily Starting\+Window\+::\+Starting\+Window (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em parent} & -\/ QObject parent for signals and slots \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_starting_window_adc42244c03e210774ee58a2b5816cc37}\label{class_starting_window_adc42244c03e210774ee58a2b5816cc37}} 
+\index{StartingWindow@{StartingWindow}!````~StartingWindow@{$\sim$StartingWindow}}
+\index{````~StartingWindow@{$\sim$StartingWindow}!StartingWindow@{StartingWindow}}
+\doxysubsubsection{\texorpdfstring{$\sim$StartingWindow()}{~StartingWindow()}}
+{\footnotesize\ttfamily Starting\+Window\+::$\sim$\+Starting\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Destructor for ui 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_starting_window_a88b1f62ad06a2e72ae26b4fee0c5c519}\label{class_starting_window_a88b1f62ad06a2e72ae26b4fee0c5c519}} 
+\index{StartingWindow@{StartingWindow}!loginButtonPressed@{loginButtonPressed}}
+\index{loginButtonPressed@{loginButtonPressed}!StartingWindow@{StartingWindow}}
+\doxysubsubsection{\texorpdfstring{loginButtonPressed}{loginButtonPressed}}
+{\footnotesize\ttfamily void Starting\+Window\+::login\+Button\+Pressed (\begin{DoxyParamCaption}\item[{QString}]{username,  }\item[{QString}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_starting_window_a38fd9c4a76f7dfd3464931cd30497875}\label{class_starting_window_a38fd9c4a76f7dfd3464931cd30497875}} 
+\index{StartingWindow@{StartingWindow}!resetLoginStatus@{resetLoginStatus}}
+\index{resetLoginStatus@{resetLoginStatus}!StartingWindow@{StartingWindow}}
+\doxysubsubsection{\texorpdfstring{resetLoginStatus()}{resetLoginStatus()}}
+{\footnotesize\ttfamily void Starting\+Window\+::reset\+Login\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function for setting the login status to empty \mbox{\Hypertarget{class_starting_window_adcb68cb4ebd49053b1c4c03ff436df99}\label{class_starting_window_adcb68cb4ebd49053b1c4c03ff436df99}} 
+\index{StartingWindow@{StartingWindow}!setLoginStatus@{setLoginStatus}}
+\index{setLoginStatus@{setLoginStatus}!StartingWindow@{StartingWindow}}
+\doxysubsubsection{\texorpdfstring{setLoginStatus()}{setLoginStatus()}}
+{\footnotesize\ttfamily void Starting\+Window\+::set\+Login\+Status (\begin{DoxyParamCaption}\item[{const QString \&}]{status }\end{DoxyParamCaption})}
+
+Function for setting the login status 
+\begin{DoxyParams}{Parameters}
+{\em status} & -\/ QString containing the status \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_starting_window_a79fa1a31f49f6afb5b6844fbb9256b70}\label{class_starting_window_a79fa1a31f49f6afb5b6844fbb9256b70}} 
+\index{StartingWindow@{StartingWindow}!setSocketConnStatus@{setSocketConnStatus}}
+\index{setSocketConnStatus@{setSocketConnStatus}!StartingWindow@{StartingWindow}}
+\doxysubsubsection{\texorpdfstring{setSocketConnStatus()}{setSocketConnStatus()}}
+{\footnotesize\ttfamily void Starting\+Window\+::set\+Socket\+Conn\+Status (\begin{DoxyParamCaption}\item[{const QString \&}]{status }\end{DoxyParamCaption})}
+
+Function for setting the connection status 
+\begin{DoxyParams}{Parameters}
+{\em status} & -\/ QString containing the status \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_starting_window_a4a6b77f2460e4a1a922a10cc173e1b70}\label{class_starting_window_a4a6b77f2460e4a1a922a10cc173e1b70}} 
+\index{StartingWindow@{StartingWindow}!switchToLoading@{switchToLoading}}
+\index{switchToLoading@{switchToLoading}!StartingWindow@{StartingWindow}}
+\doxysubsubsection{\texorpdfstring{switchToLoading()}{switchToLoading()}}
+{\footnotesize\ttfamily void Starting\+Window\+::switch\+To\+Loading (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function for switching the ui from login form to the loading window \mbox{\Hypertarget{class_starting_window_abf6f47bb622a1a39819732c3cab494a9}\label{class_starting_window_abf6f47bb622a1a39819732c3cab494a9}} 
+\index{StartingWindow@{StartingWindow}!switchToLogin@{switchToLogin}}
+\index{switchToLogin@{switchToLogin}!StartingWindow@{StartingWindow}}
+\doxysubsubsection{\texorpdfstring{switchToLogin()}{switchToLogin()}}
+{\footnotesize\ttfamily void Starting\+Window\+::switch\+To\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function for switching the ui to the login form 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/ui-\/components/\mbox{\hyperlink{startingwindow_8h}{startingwindow.\+h}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/cmake-\/build-\/debug/\+Client\+\_\+autogen/\+XPLGEZ2\+AS2/\mbox{\hyperlink{cmake-build-debug_2_client__autogen_2_x_p_l_g_e_z2_a_s2_2moc__startingwindow_8cpp}{moc\+\_\+startingwindow.\+cpp}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/cmake-\/build-\/release/\+Client\+\_\+autogen/\+XPLGEZ2\+AS2/\mbox{\hyperlink{cmake-build-release_2_client__autogen_2_x_p_l_g_e_z2_a_s2_2moc__startingwindow_8cpp}{moc\+\_\+startingwindow.\+cpp}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/ui-\/components/\mbox{\hyperlink{startingwindow_8cpp}{startingwindow.\+cpp}}\end{DoxyCompactItemize}

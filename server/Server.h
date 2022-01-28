@@ -1,4 +1,11 @@
 //
+// Chatter, Programmeringsmetodik (DT047G)
+// Joel Olofsson (jool1904)
+// ServerSocket.h, 2021-12-21 - 2022-01-10
+// Contains the header definitions
+//
+
+//
 // Created by jolof on 2021-12-21.
 //
 
@@ -12,43 +19,31 @@
 #include <iostream>
 #include <memory>
 #include "ServerSocket.h"
+#include "datatypes/AuthAnswer.h"
+#include "datatypes/Message.h"
+#include "datatypes/User.h"
+#include "data/DataReader.h"
+#include "datatypes/FriendList.h"
+#include "data/DataPrinter.h"
 
-
-/*class Server : public QObject {
+class Server : public QTcpServer {
     Q_OBJECT
 public:
     explicit Server(QObject *parent = nullptr);
-signals:
-    void logMessage(const QString &msg);
-public slots:
-    void readyRead();
-    void disconnected();
-    void newConnection(qintptr socketDescriptor);
-
-private slots:
-    void clientDisconnected(ServerSocket *sender);
-    void messageReceived(ServerSocket *sender, const QString &msg);
-private:
-    std::vector<ServerSocket*> clients;
-    std::unique_ptr<QTcpServer> server;
-};*/
-
-class Server : public QTcpServer {
-Q_OBJECT
-public:
-    explicit Server(QObject *parent = nullptr);
 
     void logMessage(const QString &msg);
 public slots:
-    void readyRead();
-    void disconnected();
     void incomingConnection(qintptr socketDescriptor) override;
-
 private slots:
     void clientDisconnected(ServerSocket *sender);
-    void messageReceived(ServerSocket *sender, const QString &msg);
+    void messageReceived(ServerSocket *senderSocket, QDataStream &stream);
+    void authMessageReceived(ServerSocket *socket, QDataStream &stream);
 private:
-    std::vector<ServerSocket*> clients;
+    bool userExists(User userdata);
+
+    QMap<User, ServerSocket*> clients;
+    std::map<QString, User> usersRegistered;
+    QMap<QString, class FriendList> friendLists;
 };
 
 

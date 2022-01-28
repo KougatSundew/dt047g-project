@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>401</width>
+    <width>400</width>
     <height>500</height>
    </rect>
   </property>
@@ -43,10 +43,10 @@
    <widget class="QLabel" name="lblLoader">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>160</y>
-      <width>141</width>
-      <height>111</height>
+      <x>100</x>
+      <y>150</y>
+      <width>170</width>
+      <height>160</height>
      </rect>
     </property>
     <property name="font">
@@ -57,6 +57,9 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="lblTitle">
@@ -76,6 +79,9 @@
     </property>
     <property name="text">
      <string>Chatter 3000</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="lblStatus">
@@ -145,6 +151,9 @@
     </property>
     <property name="text">
      <string>Chatter 3000</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="lblPassword">

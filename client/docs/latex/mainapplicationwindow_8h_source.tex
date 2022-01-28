@@ -1,0 +1,65 @@
+\hypertarget{mainapplicationwindow_8h_source}{}\doxysection{mainapplicationwindow.\+h}
+\label{mainapplicationwindow_8h_source}\index{N:/GitHub/dt047g-\/project/client/ui-\/components/mainapplicationwindow.h@{N:/GitHub/dt047g-\/project/client/ui-\/components/mainapplicationwindow.h}}
+\mbox{\hyperlink{mainapplicationwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Chatter, Programmeringsmetodik (DT047G)}}
+\DoxyCodeLine{3 \textcolor{comment}{// Joel Olofsson (jool1904)}}
+\DoxyCodeLine{4 \textcolor{comment}{// mainapplicationwindow.h , 2022-\/01-\/07 -\/ 2021-\/01-\/12}}
+\DoxyCodeLine{5 \textcolor{comment}{// Contains the header definitions}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Created by jolof on 2022-\/01-\/07.}}
+\DoxyCodeLine{10 \textcolor{comment}{//}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef CLIENT\_MAINAPPLICATIONWINDOW\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define CLIENT\_MAINAPPLICATIONWINDOW\_H}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <QGridLayout>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <QListView>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}../data/FriendList.h"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}../data/Friend.h"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}../data/MessageList.h"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}../data/Message.h"{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{privatemessagepanel_8h}{privatemessagepanel.h}}"{}}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}../data/User.h"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include <QMainWindow>}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{30 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_ui}{Ui}} \{ \textcolor{keyword}{class }\mbox{\hyperlink{class_main_application_window}{MainApplicationWindow}}; \}}
+\DoxyCodeLine{31 QT\_END\_NAMESPACE}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{class }\mbox{\hyperlink{class_main_application_window}{MainApplicationWindow}} : \textcolor{keyword}{public} QMainWindow \{}
+\DoxyCodeLine{34 Q\_OBJECT}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{public}:}
+\DoxyCodeLine{37     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_main_application_window_a7aa741938892067c0287f13259e2cd2e}{MainApplicationWindow}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_application_window_a3d73922d5db18303c55a8823a6c40c3b}{loadFriendList}}(std::shared\_ptr<class FriendList> friends);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_application_window_a46fae101aafcaf414ca76cef7b9c4883}{loadPrivateMessageWindow}}(\textcolor{keyword}{class} \mbox{\hyperlink{class_message}{Message}} message);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_application_window_ab32c1d3939da453a75b04ed9f907d7b5}{privateWindowAddMessage}}(\textcolor{keyword}{class} \mbox{\hyperlink{class_message}{Message}} message);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_application_window_abf7e094b710c8a85235439819cf31eed}{setUser}}(\mbox{\hyperlink{class_user}{User}} data);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \mbox{\hyperlink{class_main_application_window_ade46fcc69a2833c1d52e8a99fab40713}{\string~MainApplicationWindow}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{45 signals:}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_application_window_a675dfdc2eb26424134657a2358e0a7d6}{sendMessage}}(QString receiver, QString message);}
+\DoxyCodeLine{47 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} onFriendListItemChanged(QListWidgetItem *item);}
+\DoxyCodeLine{49 \textcolor{keyword}{private}:}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} addMessage(QString receiver, QString message);}
+\DoxyCodeLine{51     \mbox{\hyperlink{class_ui_1_1_main_application_window}{Ui::MainApplicationWindow}} *ui;}
+\DoxyCodeLine{52     std::unique\_ptr<PrivateMessagePanel> m\_chatWindow;}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     std::shared\_ptr<class FriendList> friends;}
+\DoxyCodeLine{55     \mbox{\hyperlink{class_user}{User}} userdata;}
+\DoxyCodeLine{56 \};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CLIENT\_MAINAPPLICATIONWINDOW\_H}}
+
+\end{DoxyCode}

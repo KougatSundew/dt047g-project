@@ -15,7 +15,37 @@ find_package(Qt5 COMPONENTS
         Network
         REQUIRED)
 
-add_executable(Client main.cpp ui-components/startingwindow.cpp ui-components/startingwindow.h ui-components/startingwindow.ui Client.cpp Client.h ApplicationCore.cpp ApplicationCore.h ui-components/statusdialog.cpp ui-components/statusdialog.h ui-components/statusdialog.ui)
+add_executable(Client main.cpp
+        ui-components/startingwindow.cpp
+        ui-components/startingwindow.h
+        ui-components/startingwindow.ui
+        Client.cpp
+        Client.h
+        ApplicationCore.cpp
+        ApplicationCore.h
+        ui-components/statusdialog.cpp
+        ui-components/statusdialog.h
+        ui-components/statusdialog.ui
+        data/AbstractData.h
+        data/AbstractData.cpp
+        data/Message.h
+        data/Message.cpp
+        data/User.h
+        data/User.cpp
+        data/AuthAnswer.cpp
+        data/AuthAnswer.h
+        data/FriendList.cpp
+        data/FriendList.h
+        data/MessageList.cpp
+        data/MessageList.h
+        data/Friend.h
+        data/Friend.cpp
+        ui-components/mainapplicationwindow.cpp
+        ui-components/mainapplicationwindow.h
+        ui-components/mainapplicationwindow.ui
+        ui-components/privatemessagepanel.cpp
+        ui-components/privatemessagepanel.h
+        ui-components/privatemessagepanel.ui)
 target_link_libraries(Client
         Qt5::Core
         Qt5::Gui

@@ -11,9 +11,13 @@ set(CMAKE_PREFIX_PATH "C:/Qt/5.12.12/mingw73_64/lib/cmake")
 find_package(Qt5 COMPONENTS Core REQUIRED)
 find_package(Qt5 COMPONENTS Network REQUIRED)
 
-add_executable(server main.cpp Server.cpp Server.h ServerSocket.cpp ServerSocket.h)
-target_link_libraries(server Qt5::Core Qt5::Network)
+add_executable(server main.cpp Server.cpp Server.h ServerSocket.cpp ServerSocket.h
+        datatypes/AbstractData.cpp datatypes/AbstractData.h datatypes/AuthAnswer.h datatypes/AuthAnswer.cpp
+        datatypes/Friend.cpp datatypes/Friend.h datatypes/FriendList.h datatypes/FriendList.cpp
+        datatypes/Message.h datatypes/Message.cpp datatypes/MessageList.h datatypes/MessageList.cpp
+        datatypes/User.cpp datatypes/User.h data/DataReader.h data/DataReader.cpp data/DataPrinter.h data/DataPrinter.cpp)
 
+target_link_libraries(server Qt5::Core Qt5::Network)
 
 if (WIN32)
     set(DEBUG_SUFFIX)

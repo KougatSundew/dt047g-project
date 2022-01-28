@@ -1,0 +1,42 @@
+\hypertarget{_friend_list_8h_source}{}\doxysection{Friend\+List.\+h}
+\label{_friend_list_8h_source}\index{N:/GitHub/dt047g-\/project/server/datatypes/FriendList.h@{N:/GitHub/dt047g-\/project/server/datatypes/FriendList.h}}
+\mbox{\hyperlink{_friend_list_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by jolof on 2022-\/01-\/06.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef SERVER\_FRIENDLIST\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define SERVER\_FRIENDLIST\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_abstract_data_8h}{AbstractData.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_message_8h}{Message.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_friend_8h}{Friend.h}}"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_friend_list}{FriendList}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_abstract_data}{AbstractData}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_friend_list_adbcef6757043185fd719d949cd68d838}{FriendList}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_friend_list_a7f8b4f0a7f7900f36a0e941a7621c999}{add}}(QString username, QVector<class Message> messages);}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_friend_list_af7b84fe1eda5bd4f3bfcc5bd46c25a70}{addMessage}}(\textcolor{keyword}{class} \mbox{\hyperlink{class_message}{Message}}* msg);}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_friend_list_af7b84fe1eda5bd4f3bfcc5bd46c25a70}{addMessage}}(\textcolor{keyword}{class} \mbox{\hyperlink{class_message}{Message}} msg);}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_friend_list_af7b84fe1eda5bd4f3bfcc5bd46c25a70}{addMessage}}(QString receiver, \textcolor{keyword}{class} \mbox{\hyperlink{class_message}{Message}} message);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     QDataStream\& \mbox{\hyperlink{class_friend_list_a53bcd6dc61df4d15b9603a148bd9a37f}{toStream}}(QDataStream \&stream) \textcolor{keyword}{const override};}
+\DoxyCodeLine{21     QDataStream\& \mbox{\hyperlink{class_friend_list_abda7881c5a0a8538db97e120393cefab}{fromStream}}(QDataStream \&stream) \textcolor{keyword}{override};}
+\DoxyCodeLine{22     \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{DataType}} \mbox{\hyperlink{class_friend_list_ab805b03e21c101289a1ac20cc044af41}{type}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_friend_list_ab24ae9448747caf3d659e16a6c7b8ee3}{size}}();}
+\DoxyCodeLine{25     QVector<Friend>::iterator \mbox{\hyperlink{class_friend_list_a9df7544f5818363b392f635edd4644e6}{begin}}();}
+\DoxyCodeLine{26     QVector<Friend>::iterator \mbox{\hyperlink{class_friend_list_aaf5fdf8a32529a4fda05ce9f5938a333}{end}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     QVector<Friend> \mbox{\hyperlink{class_friend_list_abfcb90641dd24a1d310a0aa7e92ec3da}{getFriends}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{29     \textcolor{keyword}{const} \mbox{\hyperlink{class_friend}{Friend}} *\mbox{\hyperlink{class_friend_list_a5aa66664ecd00d606bd52d582e30ce83}{getFriend}}(QString username) \textcolor{keyword}{const};}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_friend}{Friend}}* \mbox{\hyperlink{class_friend_list_a2b06a9c9ae37dabed70278eef5a93970}{getFriendPtr}}(QString username);}
+\DoxyCodeLine{31 \textcolor{keyword}{private}:}
+\DoxyCodeLine{32     QVector<Friend> friends;}
+\DoxyCodeLine{33 \};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//SERVER\_FRIENDLIST\_H}}
+
+\end{DoxyCode}

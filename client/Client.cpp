@@ -1,43 +1,97 @@
+
 //
 // Created by jolof on 2021-12-29.
 //
 
 #include "Client.h"
+/**
+ * Default constructor
+ * @param parent - QObject parent for signals & slots
+ * @param ip - type of QHostAddress that contains the IP to the server
+ * @param port - type of int that contains port number
+ */
+Client::Client(QObject *parent, QHostAddress ip, int port): QObject(parent), m_ip(ip), m_port(port) {
+    m_clientSocket = std::make_unique<QTcpSocket>(this);
 
-Client::Client(QObject *parent, QHostAddress ip, int port): QObject(parent), m_ip(ip), m_port(port), m_loggedIn(false) {
-    m_clientSocket = new QTcpSocket(this); //TODO: Change to unique_ptr for RAII
-    //TODO: fix socket exception
-    //connect(m_clientSocket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(error(QAbstractSocket::SocketError)));
-    //connect(m_clientSocket, &QTcpSocket::connected, this, &Client::connectToServer);
-    connect(m_clientSocket, &QTcpSocket::connected, this, &Client::connected);
-    connect(m_clientSocket, &QTcpSocket::readyRead, this, &Client::onReadyRead);
-    connect(m_clientSocket, &QTcpSocket::disconnected, this, [this](){m_loggedIn = false;});
+    connect(m_clientSocket.get(), &QTcpSocket::connected, this, [this]() { emit connected(); m_connected = true;});
+    connect(m_clientSocket.get(), &QTcpSocket::readyRead, this, &Client::onReadyRead);
+    connect(m_clientSocket.get(), &QTcpSocket::disconnected, this, [this](){ emit disconnected(); m_connected = false;});
 }
-
+/**
+ * Function that handles when the socket is ready for incomming data
+ */
 void Client::onReadyRead() {
-    std::cout << "Message from server received" << "\n";
-    QString message = m_clientSocket->readLine();
-    std::cout << "Server: " << message.toStdString() << "\n";
-}
+    QByteArray datagram;
+    datagram.reserve(m_clientSocket->bytesAvailable());
+    datagram = m_clientSocket->readAll();
 
-void Client::connectToServer(const QHostAddress &address, quint16 port) {
+    QDataStream readStream(&datagram, QIODevice::ReadOnly);
+
+    qint16 sizeRead;
+    short int type;
+    readStream >> sizeRead;
+
+    //if(m_clientSocket->bytesAvailable() < sizeRead) return; TODO: check if the data is 0
+    readStream >> type;
+    if(type == DataType::Message) {
+        emit messageReceived(readStream);
+    }
+    if(type == DataType::AuthResponse) {
+        emit authReceived(readStream);
+    }
+    if(type == DataType::FriendList) {
+        emit friendListReceived(readStream);
+    }
+}
+/**
+ * Function for connecting to server with IP and port
+ * @param address - QHostAddress with IP
+ * @param port - int with port
+ */
+void Client::connectToServer(const QHostAddress &address, int port) {
     m_clientSocket->connectToHost(address, port);
 }
-
+/**
+ * Function for connecting to server with use of member m_ip and m_port
+ */
 void Client::connectToServer() {
     m_clientSocket->connectToHost(m_ip, m_port);
 }
-
-void Client::sendMessage(const char *text) {
-    //if(text != nullptr) return; //Exception for empty text //TODO: fix exception for when message is empty
-    m_clientSocket->write(text);
-}
-
+/**
+ * Function for disconnecting the socket
+ */
 void Client::disconnectFromServer() {
     m_clientSocket->disconnectFromHost();
 }
-
-void Client::login(const QString &userName) {
-
+/**
+ * Function that Aborts the current connection and resets the socket
+ */
+void Client::abort() {
+    m_clientSocket->abort();
 }
+/**
+ * Function for sending data with AbstractData
+ * @param data - type of AbstractData
+ */
+void Client::write(const AbstractData &data) {
+    short int type = data.type();
+    QByteArray datagram;
+    QDataStream writeStream(&datagram, QIODevice::WriteOnly);
 
+    writeStream.setVersion(QDataStream::Qt_5_12);
+    writeStream.startTransaction();
+
+    writeStream << quint16(0) << type;
+    writeStream << data;
+    writeStream.device()->seek(0);
+    writeStream << qint16(datagram.size() - sizeof(qint16)); // writing data size
+    m_clientSocket->write(datagram);
+    m_clientSocket->waitForBytesWritten();
+}
+/**
+ * Function for checking the connection
+ * @return - returns boolean that can be true or false
+ */
+bool Client::isSocketConnected() {
+    return m_connected;
+}

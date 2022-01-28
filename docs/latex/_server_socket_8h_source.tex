@@ -1,0 +1,47 @@
+\hypertarget{_server_socket_8h_source}{}\doxysection{Server\+Socket.\+h}
+\label{_server_socket_8h_source}\index{N:/GitHub/dt047g-\/project/server/ServerSocket.h@{N:/GitHub/dt047g-\/project/server/ServerSocket.h}}
+\mbox{\hyperlink{_server_socket_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Created by jolof on 2021-\/12-\/2 8.}}
+\DoxyCodeLine{10 \textcolor{comment}{//}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef SERVER\_SERVERSOCKET\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define SERVER\_SERVERSOCKET\_H}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <QObject>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <QTcpSocket>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <QDataStream>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_abstract_data_8h}{datatypes/AbstractData.h}}"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_message_8h}{datatypes/Message.h}}"{}}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{class }\mbox{\hyperlink{class_server_socket}{ServerSocket}} : \textcolor{keyword}{public} QObject\{}
+\DoxyCodeLine{24     Q\_OBJECT}
+\DoxyCodeLine{25     Q\_DISABLE\_COPY(\mbox{\hyperlink{class_server_socket}{ServerSocket}})}
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_server_socket_a17f872bc581254fe3ae9a3a48cc01064}{ServerSocket}}(QObject *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{28     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_server_socket_a13c5eea8e332338780b63d73a79fd5f6}{setSocketDescriptor}}(qintptr socketDescriptor);}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_socket_ac4ab68c7d022ce746e477154ce35deea}{sendMsg}}(\textcolor{keyword}{const} QString \&msg);}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_socket_a60664765242ce44f39bcd9bc758546f2}{write}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_abstract_data}{AbstractData}} \&data);}
+\DoxyCodeLine{31 signals:}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_socket_a1cfeceaccace1488003eb0f007a9d39d}{disconnectedFromClient}}();}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_socket_a63888bca4dc900a4b57b1a2c91e27bdb}{messageReceived}}(\mbox{\hyperlink{class_server_socket}{ServerSocket}}* senderSocket, QDataStream \&stream);}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_socket_a5dfd449d34275fae7b193e81c6fa5381}{logMessage}}(\textcolor{keyword}{const} QString \&msg);}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_socket_a8db372def6fedfab48e53bb9855c3c02}{authReceived}}(\mbox{\hyperlink{class_server_socket}{ServerSocket}} *socket, QDataStream \&stream);}
+\DoxyCodeLine{36 \textcolor{keyword}{public} slots:}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_socket_a5cd81592734b1414bf8ca09e69ef5068}{disconnectFromClient}}();}
+\DoxyCodeLine{38 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} receiveMessage();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{keyword}{private}:}
+\DoxyCodeLine{42     std::unique\_ptr<QTcpSocket> m\_serverSocket;}
+\DoxyCodeLine{43     QString m\_username;}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//SERVER\_SERVERSOCKET\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,53 @@
+\hypertarget{privatemessagepanel_8h_source}{}\doxysection{privatemessagepanel.\+h}
+\label{privatemessagepanel_8h_source}\index{N:/GitHub/dt047g-\/project/client/ui-\/components/privatemessagepanel.h@{N:/GitHub/dt047g-\/project/client/ui-\/components/privatemessagepanel.h}}
+\mbox{\hyperlink{privatemessagepanel_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Chatter, Programmeringsmetodik (DT047G)}}
+\DoxyCodeLine{3 \textcolor{comment}{// Joel Olofsson (jool1904)}}
+\DoxyCodeLine{4 \textcolor{comment}{// privatemessagepanel.h, 2022-\/01-\/08 -\/ 2021-\/01-\/13}}
+\DoxyCodeLine{5 \textcolor{comment}{// Contains the header definitions}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Created by jolof on 2022-\/01-\/08.}}
+\DoxyCodeLine{10 \textcolor{comment}{//}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef CLIENT\_PRIVATEMESSAGEPANEL\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define CLIENT\_PRIVATEMESSAGEPANEL\_H}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <QListWidgetItem>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}../data/Message.h"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}../data/Friend.h"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{21 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_ui}{Ui}} \{ \textcolor{keyword}{class }\mbox{\hyperlink{class_private_message_panel}{PrivateMessagePanel}}; \}}
+\DoxyCodeLine{22 QT\_END\_NAMESPACE}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{class_private_message_panel}{PrivateMessagePanel}} : \textcolor{keyword}{public} QWidget \{}
+\DoxyCodeLine{25 Q\_OBJECT}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_private_message_panel_a4f24cd77424c732cce2bc5d1fbd59ac4}{PrivateMessagePanel}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \mbox{\hyperlink{class_private_message_panel_a1876597829dc64fda957e4c5edac533b}{\string~PrivateMessagePanel}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_private_message_panel_a404927cc951c2939a5956c6b6ce26fa4}{addFriend}}(\textcolor{keyword}{class} \mbox{\hyperlink{class_friend}{Friend}} user);}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_private_message_panel_a2e84a54749683c853d85574ac75325bc}{addMessage}}(\textcolor{keyword}{class} \mbox{\hyperlink{class_message}{Message}} message);}
+\DoxyCodeLine{34 signals:}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_private_message_panel_ad8f930587c61b7f60c091420f336b293}{friendListItemChanged}}(QListWidgetItem *item);}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_private_message_panel_ad472af00222132da60db183c84c9e166}{sendBtnClick}}(QString receiver, QString message);}
+\DoxyCodeLine{37 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} onSendMessageBtnClicked();}
+\DoxyCodeLine{39 \textcolor{keyword}{private}:}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} clearMessageWindow();}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} clearMessageBox();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \mbox{\hyperlink{class_ui_1_1_private_message_panel}{Ui::PrivateMessagePanel}} *ui;}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CLIENT\_PRIVATEMESSAGEPANEL\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,178 @@
+\hypertarget{class_message_list}{}\doxysection{Message\+List Class Reference}
+\label{class_message_list}\index{MessageList@{MessageList}}
+
+
+{\ttfamily \#include $<$Message\+List.\+h$>$}
+
+Inheritance diagram for Message\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_message_list}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_message_list_a2bf0246e8f2534c1f7159ae6507cf0d8}{Message\+List}} ()=default
+\item 
+\mbox{\hyperlink{class_message_list_af68ccd9d5248d326e4f47168def1bbff}{Message\+List}} (QVector$<$ class \mbox{\hyperlink{class_message}{Message}} $>$ messages)
+\item 
+void \mbox{\hyperlink{class_message_list_ae9de642faaebf383a2e4c5447d96bff5}{add}} (const class \mbox{\hyperlink{class_message}{Message}} \&msg)
+\item 
+QData\+Stream \& \mbox{\hyperlink{class_message_list_a6da9b5fe163393c7e972dec8992bb97a}{to\+Stream}} (QData\+Stream \&stream) const override
+\item 
+QData\+Stream \& \mbox{\hyperlink{class_message_list_a24fd93d7c0fbe28ba25cd158b50c12ff}{from\+Stream}} (QData\+Stream \&stream) override
+\item 
+\mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{Data\+Type}} \mbox{\hyperlink{class_message_list_aa2a9eef321f6ee7bcfa652d72766ce37}{type}} () const override
+\item 
+size\+\_\+t \mbox{\hyperlink{class_message_list_a6af065ebcd91d1c5201fbe5beca2ea46}{size}} ()
+\item 
+QVector$<$ class\+Message $>$\+::iterator \mbox{\hyperlink{class_message_list_aedaee77ed16594e26a54e6843f8e0135}{begin}} ()
+\item 
+QVector$<$ class\+Message $>$\+::iterator \mbox{\hyperlink{class_message_list_a7685d0aef4297bbc01ed548e6e63d124}{end}} ()
+\item 
+QVector$<$ class \mbox{\hyperlink{class_message}{Message}} $>$ \mbox{\hyperlink{class_message_list_ab3895225315ca4f273af05ab4b1fb977}{get\+Messages}} ()
+\item 
+QVector$<$ class \mbox{\hyperlink{class_message}{Message}} $>$ \mbox{\hyperlink{class_message_list_aca436608f902fc675cb25b12ed7b4cdc}{get\+Message\+From\+User}} (const QString \&sender, const QString \&receiver)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_message_list_a2bf0246e8f2534c1f7159ae6507cf0d8}\label{class_message_list_a2bf0246e8f2534c1f7159ae6507cf0d8}} 
+\index{MessageList@{MessageList}!MessageList@{MessageList}}
+\index{MessageList@{MessageList}!MessageList@{MessageList}}
+\doxysubsubsection{\texorpdfstring{MessageList()}{MessageList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Message\+List\+::\+Message\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_message_list_af68ccd9d5248d326e4f47168def1bbff}\label{class_message_list_af68ccd9d5248d326e4f47168def1bbff}} 
+\index{MessageList@{MessageList}!MessageList@{MessageList}}
+\index{MessageList@{MessageList}!MessageList@{MessageList}}
+\doxysubsubsection{\texorpdfstring{MessageList()}{MessageList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Message\+List\+::\+Message\+List (\begin{DoxyParamCaption}\item[{QVector$<$ class \mbox{\hyperlink{class_message}{Message}} $>$}]{messages }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em messages} & -\/ QVector$<$\+Message$>$ \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_message_list_ae9de642faaebf383a2e4c5447d96bff5}\label{class_message_list_ae9de642faaebf383a2e4c5447d96bff5}} 
+\index{MessageList@{MessageList}!add@{add}}
+\index{add@{add}!MessageList@{MessageList}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Message\+List\+::add (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{class_message}{Message}} \&}]{msg }\end{DoxyParamCaption})}
+
+Function for adding a message to messages 
+\begin{DoxyParams}{Parameters}
+{\em msg} & -\/ const \mbox{\hyperlink{class_message}{Message}}\& \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_message_list_aedaee77ed16594e26a54e6843f8e0135}\label{class_message_list_aedaee77ed16594e26a54e6843f8e0135}} 
+\index{MessageList@{MessageList}!begin@{begin}}
+\index{begin@{begin}!MessageList@{MessageList}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily QVector$<$ class\+Message $>$\+::iterator Message\+List\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function for getting the begin iterator of QVector$<$\+Message$>$ \begin{DoxyReturn}{Returns}
+-\/ returns QVector$<$class Message$>$\+::iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_message_list_a7685d0aef4297bbc01ed548e6e63d124}\label{class_message_list_a7685d0aef4297bbc01ed548e6e63d124}} 
+\index{MessageList@{MessageList}!end@{end}}
+\index{end@{end}!MessageList@{MessageList}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily QVector$<$ class\+Message $>$\+::iterator Message\+List\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function for getting the end iterator of QVector$<$\+Message$>$ \begin{DoxyReturn}{Returns}
+-\/ returns QVector$<$class Message$>$\+::iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_message_list_a24fd93d7c0fbe28ba25cd158b50c12ff}\label{class_message_list_a24fd93d7c0fbe28ba25cd158b50c12ff}} 
+\index{MessageList@{MessageList}!fromStream@{fromStream}}
+\index{fromStream@{fromStream}!MessageList@{MessageList}}
+\doxysubsubsection{\texorpdfstring{fromStream()}{fromStream()}}
+{\footnotesize\ttfamily QData\+Stream \& Message\+List\+::from\+Stream (\begin{DoxyParamCaption}\item[{QData\+Stream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Override virtual function from\+Stream 
+\begin{DoxyParams}{Parameters}
+{\em stream} & -\/ QData\+Stream\& containing the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ returns QData\+Stream\& 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_abstract_data_a0084a715ed7aa36c622be557c66694bf}{Abstract\+Data}}.
+
+\mbox{\Hypertarget{class_message_list_aca436608f902fc675cb25b12ed7b4cdc}\label{class_message_list_aca436608f902fc675cb25b12ed7b4cdc}} 
+\index{MessageList@{MessageList}!getMessageFromUser@{getMessageFromUser}}
+\index{getMessageFromUser@{getMessageFromUser}!MessageList@{MessageList}}
+\doxysubsubsection{\texorpdfstring{getMessageFromUser()}{getMessageFromUser()}}
+{\footnotesize\ttfamily QVector$<$ class \mbox{\hyperlink{class_message}{Message}} $>$ Message\+List\+::get\+Message\+From\+User (\begin{DoxyParamCaption}\item[{const QString \&}]{sender,  }\item[{const QString \&}]{receiver }\end{DoxyParamCaption})}
+
+Function for getting a messages from a user to a specific receiver 
+\begin{DoxyParams}{Parameters}
+{\em sender} & -\/ const QString\& containing the username of the sender \\
+\hline
+{\em receiver} & -\/ const QString\& containing the username of the receiver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ returns a QVector$<$\+Messsage$>$ containing all the messages that meet the specific requeriment 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_message_list_ab3895225315ca4f273af05ab4b1fb977}\label{class_message_list_ab3895225315ca4f273af05ab4b1fb977}} 
+\index{MessageList@{MessageList}!getMessages@{getMessages}}
+\index{getMessages@{getMessages}!MessageList@{MessageList}}
+\doxysubsubsection{\texorpdfstring{getMessages()}{getMessages()}}
+{\footnotesize\ttfamily QVector$<$ class \mbox{\hyperlink{class_message}{Message}} $>$ Message\+List\+::get\+Messages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function for getting the QVector$<$\+Message$>$ messages \begin{DoxyReturn}{Returns}
+-\/ returns QVector$<$\+Message$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_message_list_a6af065ebcd91d1c5201fbe5beca2ea46}\label{class_message_list_a6af065ebcd91d1c5201fbe5beca2ea46}} 
+\index{MessageList@{MessageList}!size@{size}}
+\index{size@{size}!MessageList@{MessageList}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t Message\+List\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function for getting the size of QVector$<$\+Message$>$ messages \begin{DoxyReturn}{Returns}
+-\/ returns a size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_message_list_a6da9b5fe163393c7e972dec8992bb97a}\label{class_message_list_a6da9b5fe163393c7e972dec8992bb97a}} 
+\index{MessageList@{MessageList}!toStream@{toStream}}
+\index{toStream@{toStream}!MessageList@{MessageList}}
+\doxysubsubsection{\texorpdfstring{toStream()}{toStream()}}
+{\footnotesize\ttfamily QData\+Stream \& Message\+List\+::to\+Stream (\begin{DoxyParamCaption}\item[{QData\+Stream \&}]{stream }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Override virtual function to\+Stream 
+\begin{DoxyParams}{Parameters}
+{\em stream} & -\/ QData\+Stream\& containing the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ returns QData\+Stream\& 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_abstract_data_a670be4481a377f9686a7fc108ced3458}{Abstract\+Data}}.
+
+\mbox{\Hypertarget{class_message_list_aa2a9eef321f6ee7bcfa652d72766ce37}\label{class_message_list_aa2a9eef321f6ee7bcfa652d72766ce37}} 
+\index{MessageList@{MessageList}!type@{type}}
+\index{type@{type}!MessageList@{MessageList}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{Data\+Type}} Message\+List\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Override virtual function type \begin{DoxyReturn}{Returns}
+-\/ returns Data\+Type 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_abstract_data_ad03856778da3fafd0610017140790381}{Abstract\+Data}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+N\+:/\+Git\+Hub/dt047g-\/project/server/datatypes/\mbox{\hyperlink{_message_list_8h}{Message\+List.\+h}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/server/datatypes/\mbox{\hyperlink{_message_list_8cpp}{Message\+List.\+cpp}}\end{DoxyCompactItemize}

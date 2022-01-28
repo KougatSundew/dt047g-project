@@ -4,17 +4,14 @@
 #include "ApplicationCore.h"
 
 int main(int argc, char *argv[]) {
-    QApplication a(argc, argv);
+    int currentExitCode = 0;
+    do {
+        QApplication a(argc, argv);
 
-    const QHostAddress ADDRESS("192.168.1.8"); const int PORT = 4040;
-    ApplicationCore core;
-    /*std::unique_ptr<Client> client = std::make_unique<Client>(nullptr, ADDRESS, PORT);
+        const QHostAddress ADDRESS("192.168.1.8"); const int PORT = 4040;
+        ApplicationCore core;
 
-    StartingWindow main(nullptr,client.get());
-    main.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    main.show();
-
-    client->sendMessage("Hello");
-    */
-    return QApplication::exec();
+        currentExitCode = a.exec();
+    } while(currentExitCode == ApplicationCore::EXIT_CODE_REBOOT);
+    return currentExitCode;
 }

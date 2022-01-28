@@ -1,4 +1,11 @@
 //
+// Chatter, Programmeringsmetodik (DT047G)
+// Joel Olofsson (jool1904)
+// statusdialog.h, 2022-01-02 - 2021-01-10
+// Contains the header definitions
+//
+
+//
 // Created by jolof on 2022-01-02.
 //
 
@@ -19,7 +26,8 @@ public:
     explicit StatusDialog(QWidget *parent = nullptr);
 
     ~StatusDialog() override;
-
+signals:
+    void dialogOptionPressed(bool retry);
 private:
     Ui::StatusDialog *ui;
 };

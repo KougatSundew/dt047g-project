@@ -1,0 +1,42 @@
+\hypertarget{statusdialog_8h_source}{}\doxysection{statusdialog.\+h}
+\label{statusdialog_8h_source}\index{N:/GitHub/dt047g-\/project/client/ui-\/components/statusdialog.h@{N:/GitHub/dt047g-\/project/client/ui-\/components/statusdialog.h}}
+\mbox{\hyperlink{statusdialog_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Chatter, Programmeringsmetodik (DT047G)}}
+\DoxyCodeLine{3 \textcolor{comment}{// Joel Olofsson (jool1904)}}
+\DoxyCodeLine{4 \textcolor{comment}{// statusdialog.h, 2022-\/01-\/02 -\/ 2021-\/01-\/10}}
+\DoxyCodeLine{5 \textcolor{comment}{// Contains the header definitions}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Created by jolof on 2022-\/01-\/02.}}
+\DoxyCodeLine{10 \textcolor{comment}{//}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef CLIENT\_STATUSDIALOG\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define CLIENT\_STATUSDIALOG\_H}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{19 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_ui}{Ui}} \{ \textcolor{keyword}{class }\mbox{\hyperlink{class_status_dialog}{StatusDialog}}; \}}
+\DoxyCodeLine{20 QT\_END\_NAMESPACE}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_status_dialog}{StatusDialog}} : \textcolor{keyword}{public} QDialog \{}
+\DoxyCodeLine{23 Q\_OBJECT}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_status_dialog_aaac39bc98dce2c46828c13f088842567}{StatusDialog}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \mbox{\hyperlink{class_status_dialog_a614bcedcfafd1705deca16a0669dcc8c}{\string~StatusDialog}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{29 signals:}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_status_dialog_aebee6deac2d6a8c8af8f127ffafb44c5}{dialogOptionPressed}}(\textcolor{keywordtype}{bool} retry);}
+\DoxyCodeLine{31 \textcolor{keyword}{private}:}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_ui_1_1_status_dialog}{Ui::StatusDialog}} *ui;}
+\DoxyCodeLine{33 \};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CLIENT\_STATUSDIALOG\_H}}
+
+\end{DoxyCode}

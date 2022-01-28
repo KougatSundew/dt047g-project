@@ -1,0 +1,75 @@
+\hypertarget{class_server}{}\doxysection{Server Class Reference}
+\label{class_server}\index{Server@{Server}}
+
+
+{\ttfamily \#include $<$Server.\+h$>$}
+
+Inheritance diagram for Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_server}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_server_a8a5e1567cc4c638e9e5a848d601de908}{ready\+Read}} ()
+\item 
+void \mbox{\hyperlink{class_server_a66e7b75873e4b75cdbf08acc30907338}{disconnected}} ()
+\item 
+void \mbox{\hyperlink{class_server_aa229a1587514197693274aa0d589344b}{incoming\+Connection}} (qintptr socket\+Descriptor) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_server_aaf98d5194faee831c6340cc736b9b879}{Server}} (QObject $\ast$parent=nullptr)
+\item 
+void \mbox{\hyperlink{class_server_a54385cd913ed0c85c4254b6fbf81d3ab}{log\+Message}} (const QString \&msg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_server_aaf98d5194faee831c6340cc736b9b879}\label{class_server_aaf98d5194faee831c6340cc736b9b879}} 
+\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily Server\+::\+Server (\begin{DoxyParamCaption}\item[{QObject $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Default constructor 
+\begin{DoxyParams}{Parameters}
+{\em parent} & -\/ pointer to QObject, defaults to nullptr \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_server_a66e7b75873e4b75cdbf08acc30907338}\label{class_server_a66e7b75873e4b75cdbf08acc30907338}} 
+\index{Server@{Server}!disconnected@{disconnected}}
+\index{disconnected@{disconnected}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{disconnected}{disconnected}}
+{\footnotesize\ttfamily void Server\+::disconnected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_server_aa229a1587514197693274aa0d589344b}\label{class_server_aa229a1587514197693274aa0d589344b}} 
+\index{Server@{Server}!incomingConnection@{incomingConnection}}
+\index{incomingConnection@{incomingConnection}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{incomingConnection}{incomingConnection}}
+{\footnotesize\ttfamily void Server\+::incoming\+Connection (\begin{DoxyParamCaption}\item[{qintptr}]{socket\+Descriptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_server_a54385cd913ed0c85c4254b6fbf81d3ab}\label{class_server_a54385cd913ed0c85c4254b6fbf81d3ab}} 
+\index{Server@{Server}!logMessage@{logMessage}}
+\index{logMessage@{logMessage}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{logMessage()}{logMessage()}}
+{\footnotesize\ttfamily void Server\+::log\+Message (\begin{DoxyParamCaption}\item[{const QString \&}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_server_a8a5e1567cc4c638e9e5a848d601de908}\label{class_server_a8a5e1567cc4c638e9e5a848d601de908}} 
+\index{Server@{Server}!readyRead@{readyRead}}
+\index{readyRead@{readyRead}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{readyRead}{readyRead}}
+{\footnotesize\ttfamily void Server\+::ready\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+N\+:/\+Git\+Hub/dt047g-\/project/server/\mbox{\hyperlink{_server_8h}{Server.\+h}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/server/\mbox{\hyperlink{_server_8cpp}{Server.\+cpp}}\end{DoxyCompactItemize}

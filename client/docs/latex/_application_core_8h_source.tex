@@ -1,0 +1,75 @@
+\hypertarget{_application_core_8h_source}{}\doxysection{Application\+Core.\+h}
+\label{_application_core_8h_source}\index{N:/GitHub/dt047g-\/project/client/ApplicationCore.h@{N:/GitHub/dt047g-\/project/client/ApplicationCore.h}}
+\mbox{\hyperlink{_application_core_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Chatter, Programmeringsmetodik (DT047G)}}
+\DoxyCodeLine{3 \textcolor{comment}{// Joel Olofsson (jool1904)}}
+\DoxyCodeLine{4 \textcolor{comment}{// ApplicationCore.h, 2021-\/12-\/29 -\/ 2021-\/01-\/10}}
+\DoxyCodeLine{5 \textcolor{comment}{// Denna fil håller hand om hela applikationen, signal hantering och data hantering}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Created by jolof on 2021-\/12-\/29.}}
+\DoxyCodeLine{10 \textcolor{comment}{//}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef CLIENT\_APPLICATIONCORE\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define CLIENT\_APPLICATIONCORE\_H}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <QCoreApplication>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <QTimer>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_client_8h}{Client.h}}"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{startingwindow_8h}{ui-\/components/startingwindow.h}}"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mainapplicationwindow_8h}{ui-\/components/mainapplicationwindow.h}}"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{statusdialog_8h}{ui-\/components/statusdialog.h}}"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_user_8h}{data/User.h}}"{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_message_8h}{data/Message.h}}"{}}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_auth_answer_8h}{data/AuthAnswer.h}}"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_friend_list_8h}{data/FriendList.h}}"{}}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{class }\mbox{\hyperlink{class_application_core}{ApplicationCore}} : \textcolor{keyword}{public} QObject \{}
+\DoxyCodeLine{29     Q\_OBJECT}
+\DoxyCodeLine{30 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_application_core_ae45db252479a35725aff931c433a78ae}{ApplicationCore}}(QObject *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keyword}{static} \textcolor{keywordtype}{int} \textcolor{keyword}{const} \mbox{\hyperlink{class_application_core_ac14a9a7884be24d1f628dce40cd23588}{EXIT\_CODE\_REBOOT}} = -\/1;}
+\DoxyCodeLine{34     \textcolor{keyword}{static} \textcolor{keywordtype}{int} \textcolor{keyword}{const} \mbox{\hyperlink{class_application_core_af29b893eccc2f433510708317da32df9}{EXIT\_CODE\_QUIT}} = -\/2;}
+\DoxyCodeLine{35 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} onSocketConnected();}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} onSocketDisconnected();}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} onConnectionTimeOut();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} onMessageReceived(QDataStream \&stream);}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} onAuthMessageReceived(QDataStream \&stream);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} onFriendListReceived(QDataStream \&stream);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} onLoginBtnPressed(QString username, QString password);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} onSendMessage(QString receiver, QString message);}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} onDialogRetry(\textcolor{keywordtype}{bool} retry);}
+\DoxyCodeLine{46 \textcolor{keyword}{private}:}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} login();}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} connectSocketSignals();}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} connectSignals();}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} socketRetryConnection();}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{keywordtype}{int} connectionRetryAttempts = 0;}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{comment}{//Timeout time 10seconds}}
+\DoxyCodeLine{55     \textcolor{keyword}{const} \textcolor{keywordtype}{int} SOCKETCONNECTTIME = 10000;}
+\DoxyCodeLine{56     \textcolor{keyword}{const} \textcolor{keywordtype}{int} maxConnectionRetryAttempts = 5;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     std::unique\_ptr<QTimer> m\_timer;}
+\DoxyCodeLine{59     std::unique\_ptr<Client> m\_client;}
+\DoxyCodeLine{60     std::unique\_ptr<StartingWindow> m\_start;}
+\DoxyCodeLine{61     std::unique\_ptr<MainApplicationWindow> m\_mainWindow;}
+\DoxyCodeLine{62     std::unique\_ptr<StatusDialog> m\_retryDialogWindow;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     std::shared\_ptr<class FriendList> friends;}
+\DoxyCodeLine{65     \mbox{\hyperlink{class_user}{User}} userdata;}
+\DoxyCodeLine{66 \};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CLIENT\_APPLICATIONCORE\_H}}
+
+\end{DoxyCode}

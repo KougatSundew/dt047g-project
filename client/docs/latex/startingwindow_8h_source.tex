@@ -1,0 +1,58 @@
+\hypertarget{startingwindow_8h_source}{}\doxysection{startingwindow.\+h}
+\label{startingwindow_8h_source}\index{N:/GitHub/dt047g-\/project/client/ui-\/components/startingwindow.h@{N:/GitHub/dt047g-\/project/client/ui-\/components/startingwindow.h}}
+\mbox{\hyperlink{startingwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Chatter, Programmeringsmetodik (DT047G)}}
+\DoxyCodeLine{3 \textcolor{comment}{// Joel Olofsson (jool1904)}}
+\DoxyCodeLine{4 \textcolor{comment}{// startingwindow.h, 2021-\/12-\/29 -\/ 2021-\/01-\/11}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{comment}{//}}
+\DoxyCodeLine{8 \textcolor{comment}{// Created by jolof on 2021-\/12-\/29.}}
+\DoxyCodeLine{9 \textcolor{comment}{//}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef CLIENT\_STARTINGWINDOW\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define CLIENT\_STARTINGWINDOW\_H}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}../Client.h"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{19 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_ui}{Ui}} \{ \textcolor{keyword}{class }\mbox{\hyperlink{class_starting_window}{StartingWindow}}; \}}
+\DoxyCodeLine{20 QT\_END\_NAMESPACE}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_starting_window}{StartingWindow}} : \textcolor{keyword}{public} QWidget \{}
+\DoxyCodeLine{23     Q\_OBJECT}
+\DoxyCodeLine{24     \textcolor{comment}{//Makes is so that this object cant be copied}}
+\DoxyCodeLine{25     Q\_DISABLE\_COPY(\mbox{\hyperlink{class_starting_window}{StartingWindow}})}
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_starting_window_a7e66f6f4202d43a0c4aa59628b75bee8}{StartingWindow}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \mbox{\hyperlink{class_starting_window_adc42244c03e210774ee58a2b5816cc37}{\string~StartingWindow}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_starting_window_abf6f47bb622a1a39819732c3cab494a9}{switchToLogin}}();}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_starting_window_a4a6b77f2460e4a1a922a10cc173e1b70}{switchToLoading}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_starting_window_adcb68cb4ebd49053b1c4c03ff436df99}{setLoginStatus}}(\textcolor{keyword}{const} QString \&status);}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_starting_window_a79fa1a31f49f6afb5b6844fbb9256b70}{setSocketConnStatus}}(\textcolor{keyword}{const} QString \&status);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_starting_window_a38fd9c4a76f7dfd3464931cd30497875}{resetLoginStatus}}();}
+\DoxyCodeLine{38 signals:}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_starting_window_a88b1f62ad06a2e72ae26b4fee0c5c519}{loginButtonPressed}}(QString username, QString password);}
+\DoxyCodeLine{40 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} onLoginBtnPress();}
+\DoxyCodeLine{42 \textcolor{keyword}{private}:}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} initLoadAnimation();}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} setStyleSettings();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \mbox{\hyperlink{class_ui_1_1_starting_window}{Ui::StartingWindow}} *ui;}
+\DoxyCodeLine{47     std::unique\_ptr<QMovie> loadAnimation;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CLIENT\_STARTINGWINDOW\_H}}
+
+\end{DoxyCode}

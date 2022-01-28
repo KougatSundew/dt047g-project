@@ -1,0 +1,50 @@
+\hypertarget{_abstract_data_8h_source}{}\doxysection{Abstract\+Data.\+h}
+\label{_abstract_data_8h_source}\index{N:/GitHub/dt047g-\/project/server/datatypes/AbstractData.h@{N:/GitHub/dt047g-\/project/server/datatypes/AbstractData.h}}
+\mbox{\hyperlink{_abstract_data_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Chatter, Programmeringsmetodik (DT047G)}}
+\DoxyCodeLine{3 \textcolor{comment}{// Joel Olofsson (jool1904)}}
+\DoxyCodeLine{4 \textcolor{comment}{// AbstractData.h, 2022-\/01-\/04 -\/ 2022-\/01-\/13}}
+\DoxyCodeLine{5 \textcolor{comment}{// Contains the header definitions and implementation of the abstract class}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Created by jolof on 2022-\/01-\/04.}}
+\DoxyCodeLine{10 \textcolor{comment}{//}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef DT047G\_PROJECT\_ABSTRACTDATA\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define DT047G\_PROJECT\_ABSTRACTDATA\_H}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <QDataStream>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <QTextStream>}}
+\DoxyCodeLine{17 \textcolor{comment}{//enum containing different datatypes}}
+\DoxyCodeLine{18 \textcolor{keyword}{enum} \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{DataType}} : \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} \{}
+\DoxyCodeLine{19     \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88ace394d19b5524b35a25228cccdb6d713}{AuthRequest}},}
+\DoxyCodeLine{20     \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88ab36be73d0d4899c5ed4240f3fa4e2872}{AuthResponse}},}
+\DoxyCodeLine{21     \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88a2dfbf31ed014852927c31c352feac51f}{Message}},}
+\DoxyCodeLine{22     \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88ad4948c08c3ae990dcca641c2c006a57a}{FriendList}},}
+\DoxyCodeLine{23     \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88afb95bd74ceeb1cb8c30676b7ae45a65e}{MessageList}},}
+\DoxyCodeLine{24     \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88a38b7803ce18b4539764cac6b13611dcc}{ONLINE}},}
+\DoxyCodeLine{25     \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88ac0bbecd096aa5dd9b0cad289c4042f59}{OFFLINE}},}
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{class }\mbox{\hyperlink{class_abstract_data}{AbstractData}} \{}
+\DoxyCodeLine{29 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_abstract_data_a56b808f1280c344b618d2885e95a2be8}{AbstractData}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keyword}{friend} QDataStream \&\mbox{\hyperlink{class_abstract_data_a44791111e0f7518a5ece923326cd347a}{operator >> }}(QDataStream \&ostream, \mbox{\hyperlink{class_abstract_data}{AbstractData}} \&data);}
+\DoxyCodeLine{33     \textcolor{keyword}{friend} QDataStream \&\mbox{\hyperlink{class_abstract_data_af8a627cfdf2046a7ad83c06cc86fef74}{operator << }}(QDataStream \&istream, \textcolor{keyword}{const} \mbox{\hyperlink{class_abstract_data}{AbstractData}} \&data);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keyword}{virtual} QDataStream\& \mbox{\hyperlink{class_abstract_data_a670be4481a377f9686a7fc108ced3458}{toStream}}(QDataStream \&stream) \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{36     \textcolor{keyword}{virtual} QDataStream\& \mbox{\hyperlink{class_abstract_data_a0084a715ed7aa36c622be557c66694bf}{fromStream}}(QDataStream \&stream) = 0;}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keyword}{virtual} \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{DataType}} \mbox{\hyperlink{class_abstract_data_ad03856778da3fafd0610017140790381}{type}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{39 \};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 QDataStream \&\mbox{\hyperlink{_abstract_data_8h_afce6ed5fe75368333759ebd2d5db0349}{operator >> }}(QDataStream \&stream, \mbox{\hyperlink{class_abstract_data}{AbstractData}} \&data);}
+\DoxyCodeLine{42 QDataStream \&\mbox{\hyperlink{_abstract_data_8h_a26be2e45ac97ebaa7d2c5a084ce649e0}{operator << }}(QDataStream \&stream, \mbox{\hyperlink{class_abstract_data}{AbstractData}} \&data);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DT047G\_PROJECT\_ABSTRACTDATA\_H}}
+
+\end{DoxyCode}

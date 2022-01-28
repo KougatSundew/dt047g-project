@@ -1,0 +1,113 @@
+\hypertarget{class_main_application_window}{}\doxysection{Main\+Application\+Window Class Reference}
+\label{class_main_application_window}\index{MainApplicationWindow@{MainApplicationWindow}}
+
+
+{\ttfamily \#include $<$mainapplicationwindow.\+h$>$}
+
+Inheritance diagram for Main\+Application\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_application_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_application_window_a675dfdc2eb26424134657a2358e0a7d6}{send\+Message}} (QString receiver, QString message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_application_window_a7aa741938892067c0287f13259e2cd2e}{Main\+Application\+Window}} (QWidget $\ast$parent=nullptr)
+\item 
+void \mbox{\hyperlink{class_main_application_window_a3d73922d5db18303c55a8823a6c40c3b}{load\+Friend\+List}} (std\+::shared\+\_\+ptr$<$ class \mbox{\hyperlink{class_friend_list}{Friend\+List}} $>$ friends)
+\item 
+void \mbox{\hyperlink{class_main_application_window_a46fae101aafcaf414ca76cef7b9c4883}{load\+Private\+Message\+Window}} (class \mbox{\hyperlink{class_message}{Message}} message)
+\item 
+void \mbox{\hyperlink{class_main_application_window_ab32c1d3939da453a75b04ed9f907d7b5}{private\+Window\+Add\+Message}} (class \mbox{\hyperlink{class_message}{Message}} message)
+\item 
+void \mbox{\hyperlink{class_main_application_window_abf7e094b710c8a85235439819cf31eed}{set\+User}} (\mbox{\hyperlink{class_user}{User}} data)
+\item 
+\mbox{\hyperlink{class_main_application_window_ade46fcc69a2833c1d52e8a99fab40713}{$\sim$\+Main\+Application\+Window}} () override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_main_application_window_a7aa741938892067c0287f13259e2cd2e}\label{class_main_application_window_a7aa741938892067c0287f13259e2cd2e}} 
+\index{MainApplicationWindow@{MainApplicationWindow}!MainApplicationWindow@{MainApplicationWindow}}
+\index{MainApplicationWindow@{MainApplicationWindow}!MainApplicationWindow@{MainApplicationWindow}}
+\doxysubsubsection{\texorpdfstring{MainApplicationWindow()}{MainApplicationWindow()}}
+{\footnotesize\ttfamily Main\+Application\+Window\+::\+Main\+Application\+Window (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em parent} & -\/ QObject parent for signals / slots \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_application_window_ade46fcc69a2833c1d52e8a99fab40713}\label{class_main_application_window_ade46fcc69a2833c1d52e8a99fab40713}} 
+\index{MainApplicationWindow@{MainApplicationWindow}!````~MainApplicationWindow@{$\sim$MainApplicationWindow}}
+\index{````~MainApplicationWindow@{$\sim$MainApplicationWindow}!MainApplicationWindow@{MainApplicationWindow}}
+\doxysubsubsection{\texorpdfstring{$\sim$MainApplicationWindow()}{~MainApplicationWindow()}}
+{\footnotesize\ttfamily Main\+Application\+Window\+::$\sim$\+Main\+Application\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Destructor for ui 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_application_window_a3d73922d5db18303c55a8823a6c40c3b}\label{class_main_application_window_a3d73922d5db18303c55a8823a6c40c3b}} 
+\index{MainApplicationWindow@{MainApplicationWindow}!loadFriendList@{loadFriendList}}
+\index{loadFriendList@{loadFriendList}!MainApplicationWindow@{MainApplicationWindow}}
+\doxysubsubsection{\texorpdfstring{loadFriendList()}{loadFriendList()}}
+{\footnotesize\ttfamily void Main\+Application\+Window\+::load\+Friend\+List (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ class \mbox{\hyperlink{class_friend_list}{Friend\+List}} $>$}]{friends }\end{DoxyParamCaption})}
+
+Function for loading friends from the friendlist to the friendlistview 
+\begin{DoxyParams}{Parameters}
+{\em friends} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_application_window_a46fae101aafcaf414ca76cef7b9c4883}\label{class_main_application_window_a46fae101aafcaf414ca76cef7b9c4883}} 
+\index{MainApplicationWindow@{MainApplicationWindow}!loadPrivateMessageWindow@{loadPrivateMessageWindow}}
+\index{loadPrivateMessageWindow@{loadPrivateMessageWindow}!MainApplicationWindow@{MainApplicationWindow}}
+\doxysubsubsection{\texorpdfstring{loadPrivateMessageWindow()}{loadPrivateMessageWindow()}}
+{\footnotesize\ttfamily void Main\+Application\+Window\+::load\+Private\+Message\+Window (\begin{DoxyParamCaption}\item[{class \mbox{\hyperlink{class_message}{Message}}}]{message }\end{DoxyParamCaption})}
+
+Function for loading a message to the chat window 
+\begin{DoxyParams}{Parameters}
+{\em message} & -\/ class \mbox{\hyperlink{class_message}{Message}} containing message details \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_application_window_ab32c1d3939da453a75b04ed9f907d7b5}\label{class_main_application_window_ab32c1d3939da453a75b04ed9f907d7b5}} 
+\index{MainApplicationWindow@{MainApplicationWindow}!privateWindowAddMessage@{privateWindowAddMessage}}
+\index{privateWindowAddMessage@{privateWindowAddMessage}!MainApplicationWindow@{MainApplicationWindow}}
+\doxysubsubsection{\texorpdfstring{privateWindowAddMessage()}{privateWindowAddMessage()}}
+{\footnotesize\ttfamily void Main\+Application\+Window\+::private\+Window\+Add\+Message (\begin{DoxyParamCaption}\item[{class \mbox{\hyperlink{class_message}{Message}}}]{message }\end{DoxyParamCaption})}
+
+Function for adding a message to the privatewindow 
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_application_window_a675dfdc2eb26424134657a2358e0a7d6}\label{class_main_application_window_a675dfdc2eb26424134657a2358e0a7d6}} 
+\index{MainApplicationWindow@{MainApplicationWindow}!sendMessage@{sendMessage}}
+\index{sendMessage@{sendMessage}!MainApplicationWindow@{MainApplicationWindow}}
+\doxysubsubsection{\texorpdfstring{sendMessage}{sendMessage}}
+{\footnotesize\ttfamily void Main\+Application\+Window\+::send\+Message (\begin{DoxyParamCaption}\item[{QString}]{receiver,  }\item[{QString}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_main_application_window_abf7e094b710c8a85235439819cf31eed}\label{class_main_application_window_abf7e094b710c8a85235439819cf31eed}} 
+\index{MainApplicationWindow@{MainApplicationWindow}!setUser@{setUser}}
+\index{setUser@{setUser}!MainApplicationWindow@{MainApplicationWindow}}
+\doxysubsubsection{\texorpdfstring{setUser()}{setUser()}}
+{\footnotesize\ttfamily void Main\+Application\+Window\+::set\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user}{User}}}]{data }\end{DoxyParamCaption})}
+
+Function for setting the user data 
+\begin{DoxyParams}{Parameters}
+{\em data} & -\/ class \mbox{\hyperlink{class_user}{User}} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/ui-\/components/\mbox{\hyperlink{mainapplicationwindow_8h}{mainapplicationwindow.\+h}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/cmake-\/build-\/debug/\+Client\+\_\+autogen/\+XPLGEZ2\+AS2/\mbox{\hyperlink{cmake-build-debug_2_client__autogen_2_x_p_l_g_e_z2_a_s2_2moc__mainapplicationwindow_8cpp}{moc\+\_\+mainapplicationwindow.\+cpp}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/cmake-\/build-\/release/\+Client\+\_\+autogen/\+XPLGEZ2\+AS2/\mbox{\hyperlink{cmake-build-release_2_client__autogen_2_x_p_l_g_e_z2_a_s2_2moc__mainapplicationwindow_8cpp}{moc\+\_\+mainapplicationwindow.\+cpp}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/ui-\/components/\mbox{\hyperlink{mainapplicationwindow_8cpp}{mainapplicationwindow.\+cpp}}\end{DoxyCompactItemize}

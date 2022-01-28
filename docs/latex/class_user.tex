@@ -1,0 +1,135 @@
+\hypertarget{class_user}{}\doxysection{User Class Reference}
+\label{class_user}\index{User@{User}}
+
+
+{\ttfamily \#include $<$User.\+h$>$}
+
+Inheritance diagram for User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_user}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_a4a0137053e591fbb79d9057dd7d2283d}{User}} ()
+\item 
+\mbox{\hyperlink{class_user_aaa3511c1b1ed9dd40eca9227ed384e48}{User}} (const QString \&username, const QString \&password)
+\item 
+void \mbox{\hyperlink{class_user_a3ff12162238cf1b18827800f790c42ea}{set\+Username}} (const QString \&username)
+\item 
+void \mbox{\hyperlink{class_user_aaef2e67dfc0be2d432bb5f554758964f}{set\+Password}} (const QString \&password)
+\item 
+void \mbox{\hyperlink{class_user_a74112873ee92dad6e6ce9c2030764e85}{set\+Type}} (const \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{Data\+Type}} \&\mbox{\hyperlink{class_user_ad4a5d1c160f008d7614574ee3f51306a}{type}})
+\item 
+void \mbox{\hyperlink{class_user_a39a6440ed91ecef6cb5b4e41554ceccd}{set\+Is\+Logged\+In}} (const bool \&is\+Logged\+In)
+\item 
+QString \mbox{\hyperlink{class_user_a1c9ee5527f563fb644e0ad6bbab79f41}{get\+Username}} () const
+\item 
+QString \mbox{\hyperlink{class_user_a0479f7f168b8ec592ecc1ea9f95d0868}{get\+Password}} () const
+\item 
+bool \mbox{\hyperlink{class_user_a80646bd469a96b719ecd9fed33cf743f}{get\+Is\+Logged\+In}} () const
+\item 
+QData\+Stream \& \mbox{\hyperlink{class_user_a36b30c9971d6e3112ffcba5b625b42ea}{to\+Stream}} (QData\+Stream \&stream) const override
+\item 
+QData\+Stream \& \mbox{\hyperlink{class_user_af99d4862187ffb4a819a004c41785103}{from\+Stream}} (QData\+Stream \&stream) override
+\item 
+\mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{Data\+Type}} \mbox{\hyperlink{class_user_ad4a5d1c160f008d7614574ee3f51306a}{type}} () const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_user_a4a0137053e591fbb79d9057dd7d2283d}\label{class_user_a4a0137053e591fbb79d9057dd7d2283d}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_user_aaa3511c1b1ed9dd40eca9227ed384e48}\label{class_user_aaa3511c1b1ed9dd40eca9227ed384e48}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{const QString \&}]{username,  }\item[{const QString \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_user_af99d4862187ffb4a819a004c41785103}\label{class_user_af99d4862187ffb4a819a004c41785103}} 
+\index{User@{User}!fromStream@{fromStream}}
+\index{fromStream@{fromStream}!User@{User}}
+\doxysubsubsection{\texorpdfstring{fromStream()}{fromStream()}}
+{\footnotesize\ttfamily QData\+Stream \& User\+::from\+Stream (\begin{DoxyParamCaption}\item[{QData\+Stream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_abstract_data_a0084a715ed7aa36c622be557c66694bf}{Abstract\+Data}}.
+
+\mbox{\Hypertarget{class_user_a80646bd469a96b719ecd9fed33cf743f}\label{class_user_a80646bd469a96b719ecd9fed33cf743f}} 
+\index{User@{User}!getIsLoggedIn@{getIsLoggedIn}}
+\index{getIsLoggedIn@{getIsLoggedIn}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getIsLoggedIn()}{getIsLoggedIn()}}
+{\footnotesize\ttfamily bool User\+::get\+Is\+Logged\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_user_a0479f7f168b8ec592ecc1ea9f95d0868}\label{class_user_a0479f7f168b8ec592ecc1ea9f95d0868}} 
+\index{User@{User}!getPassword@{getPassword}}
+\index{getPassword@{getPassword}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getPassword()}{getPassword()}}
+{\footnotesize\ttfamily QString User\+::get\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_user_a1c9ee5527f563fb644e0ad6bbab79f41}\label{class_user_a1c9ee5527f563fb644e0ad6bbab79f41}} 
+\index{User@{User}!getUsername@{getUsername}}
+\index{getUsername@{getUsername}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getUsername()}{getUsername()}}
+{\footnotesize\ttfamily QString User\+::get\+Username (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_user_a39a6440ed91ecef6cb5b4e41554ceccd}\label{class_user_a39a6440ed91ecef6cb5b4e41554ceccd}} 
+\index{User@{User}!setIsLoggedIn@{setIsLoggedIn}}
+\index{setIsLoggedIn@{setIsLoggedIn}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setIsLoggedIn()}{setIsLoggedIn()}}
+{\footnotesize\ttfamily void User\+::set\+Is\+Logged\+In (\begin{DoxyParamCaption}\item[{const bool \&}]{is\+Logged\+In }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_user_aaef2e67dfc0be2d432bb5f554758964f}\label{class_user_aaef2e67dfc0be2d432bb5f554758964f}} 
+\index{User@{User}!setPassword@{setPassword}}
+\index{setPassword@{setPassword}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setPassword()}{setPassword()}}
+{\footnotesize\ttfamily void User\+::set\+Password (\begin{DoxyParamCaption}\item[{const QString \&}]{password }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_user_a74112873ee92dad6e6ce9c2030764e85}\label{class_user_a74112873ee92dad6e6ce9c2030764e85}} 
+\index{User@{User}!setType@{setType}}
+\index{setType@{setType}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void User\+::set\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{Data\+Type}} \&}]{type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_user_a3ff12162238cf1b18827800f790c42ea}\label{class_user_a3ff12162238cf1b18827800f790c42ea}} 
+\index{User@{User}!setUsername@{setUsername}}
+\index{setUsername@{setUsername}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setUsername()}{setUsername()}}
+{\footnotesize\ttfamily void User\+::set\+Username (\begin{DoxyParamCaption}\item[{const QString \&}]{username }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_user_a36b30c9971d6e3112ffcba5b625b42ea}\label{class_user_a36b30c9971d6e3112ffcba5b625b42ea}} 
+\index{User@{User}!toStream@{toStream}}
+\index{toStream@{toStream}!User@{User}}
+\doxysubsubsection{\texorpdfstring{toStream()}{toStream()}}
+{\footnotesize\ttfamily QData\+Stream \& User\+::to\+Stream (\begin{DoxyParamCaption}\item[{QData\+Stream \&}]{stream }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_abstract_data_a670be4481a377f9686a7fc108ced3458}{Abstract\+Data}}.
+
+\mbox{\Hypertarget{class_user_ad4a5d1c160f008d7614574ee3f51306a}\label{class_user_ad4a5d1c160f008d7614574ee3f51306a}} 
+\index{User@{User}!type@{type}}
+\index{type@{type}!User@{User}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{Data\+Type}} User\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_abstract_data_ad03856778da3fafd0610017140790381}{Abstract\+Data}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+N\+:/\+Git\+Hub/dt047g-\/project/server/datatypes/\mbox{\hyperlink{_user_8h}{User.\+h}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/server/datatypes/\mbox{\hyperlink{_user_8cpp}{User.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['save_0',['save',['../class_data_printer.html#a041ee75bb434b78d2cafb926a12f09fe',1,'DataPrinter']]],
+  ['server_1',['Server',['../class_server.html',1,'Server'],['../class_server.html#aaf98d5194faee831c6340cc736b9b879',1,'Server::Server()']]],
+  ['server_2ecpp_2',['Server.cpp',['../_server_8cpp.html',1,'']]],
+  ['server_2eh_3',['Server.h',['../_server_8h.html',1,'']]],
+  ['serversocket_4',['ServerSocket',['../class_server_socket.html',1,'ServerSocket'],['../class_server_socket.html#a17f872bc581254fe3ae9a3a48cc01064',1,'ServerSocket::ServerSocket()']]],
+  ['serversocket_2ecpp_5',['ServerSocket.cpp',['../_server_socket_8cpp.html',1,'']]],
+  ['serversocket_2eh_6',['ServerSocket.h',['../_server_socket_8h.html',1,'']]],
+  ['setisloggedin_7',['setIsLoggedIn',['../class_user.html#a39a6440ed91ecef6cb5b4e41554ceccd',1,'User']]],
+  ['setmessage_8',['setMessage',['../class_message.html#af2f74d1087265cb42b4857fa921ee394',1,'Message']]],
+  ['setmessages_9',['setMessages',['../class_friend.html#a1063ef29b91ea48a2efbeb70179bc530',1,'Friend']]],
+  ['setpassword_10',['setPassword',['../class_user.html#aaef2e67dfc0be2d432bb5f554758964f',1,'User']]],
+  ['setreceiver_11',['setReceiver',['../class_message.html#a912ccb7af7863f4d9f30deebb9ed2d73',1,'Message']]],
+  ['setsender_12',['setSender',['../class_message.html#a5f848a38d7fa4e7cca49887a9567dc90',1,'Message']]],
+  ['setsigned_13',['setSigned',['../class_auth_answer.html#a109097f236a7864c774ee7cd1a294d1e',1,'AuthAnswer']]],
+  ['setsocketdescriptor_14',['setSocketDescriptor',['../class_server_socket.html#a13c5eea8e332338780b63d73a79fd5f6',1,'ServerSocket']]],
+  ['settype_15',['setType',['../class_user.html#a74112873ee92dad6e6ce9c2030764e85',1,'User']]],
+  ['setusername_16',['setUsername',['../class_friend.html#a8e1b3bbdf39ae35dc0a130a8e97ea143',1,'Friend::setUsername()'],['../class_user.html#a3ff12162238cf1b18827800f790c42ea',1,'User::setUsername()']]],
+  ['size_17',['size',['../class_friend_list.html#ab24ae9448747caf3d659e16a6c7b8ee3',1,'FriendList::size()'],['../class_message_list.html#a6af065ebcd91d1c5201fbe5beca2ea46',1,'MessageList::size()']]],
+  ['sizeof_5fdptr_18',['SIZEOF_DPTR',['../cmake-build-debug_2server__autogen_2moc__predefs_8h.html#addad5b57ed33bc5c79361574d9e03c06',1,'SIZEOF_DPTR():&#160;moc_predefs.h'],['../cmake-build-release_2server__autogen_2moc__predefs_8h.html#addad5b57ed33bc5c79361574d9e03c06',1,'SIZEOF_DPTR():&#160;moc_predefs.h']]],
+  ['stringdata0_19',['stringdata0',['../structqt__meta__stringdata___server__t.html#a429d4f50f2b1a3eabf95d0b162990eb2',1,'qt_meta_stringdata_Server_t::stringdata0()'],['../structqt__meta__stringdata___server_socket__t.html#abeb7eb677170e36bf7dea0022f3f10b4',1,'qt_meta_stringdata_ServerSocket_t::stringdata0()']]],
+  ['stringify_20',['STRINGIFY',['../cmake-build-debug_2_c_make_files_23_821_81_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCCompilerId.c'],['../cmake-build-debug_2_c_make_files_23_821_81_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCXXCompilerId.cpp'],['../cmake-build-release_2_c_make_files_23_821_81_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCCompilerId.c'],['../cmake-build-release_2_c_make_files_23_821_81_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCXXCompilerId.cpp']]],
+  ['stringify_5fhelper_21',['STRINGIFY_HELPER',['../cmake-build-debug_2_c_make_files_23_821_81_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCCompilerId.c'],['../cmake-build-debug_2_c_make_files_23_821_81_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCXXCompilerId.cpp'],['../cmake-build-release_2_c_make_files_23_821_81_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCCompilerId.c'],['../cmake-build-release_2_c_make_files_23_821_81_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCXXCompilerId.cpp']]]
+];

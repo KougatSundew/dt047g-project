@@ -1,5 +1,12 @@
 //
-// Created by jolof on 2021-12-28.
+// Chatter, Programmeringsmetodik (DT047G)
+// Joel Olofsson (jool1904)
+// ServerSocket.h, 2021-12-2 - 2021-01-10
+// Contains the header definitions
+//
+
+//
+// Created by jolof on 2021-12-2 8.
 //
 
 #ifndef SERVER_SERVERSOCKET_H
@@ -9,6 +16,9 @@
 #include <QTcpSocket>
 #include <memory>
 #include <iostream>
+#include <QDataStream>
+#include "datatypes/AbstractData.h"
+#include "datatypes/Message.h"
 
 class ServerSocket : public QObject{
     Q_OBJECT
@@ -16,11 +26,12 @@ class ServerSocket : public QObject{
 public:
     explicit ServerSocket(QObject *parent = nullptr);
     virtual bool setSocketDescriptor(qintptr socketDescriptor);
-    void sendMsg(const QString &msg);
+    void write(const AbstractData &data);
 signals:
     void disconnectedFromClient();
-    void messageReceived(ServerSocket* sender, const QString &message);
+    void messageReceived(ServerSocket* senderSocket, QDataStream &stream);
     void logMessage(const QString &msg);
+    void authReceived(ServerSocket *socket, QDataStream &stream);
 public slots:
     void disconnectFromClient();
 private slots:
@@ -28,7 +39,6 @@ private slots:
 
 private:
     std::unique_ptr<QTcpSocket> m_serverSocket;
-    QString m_username;
 };
 
 

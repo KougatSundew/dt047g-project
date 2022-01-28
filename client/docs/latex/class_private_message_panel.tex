@@ -1,0 +1,95 @@
+\hypertarget{class_private_message_panel}{}\doxysection{Private\+Message\+Panel Class Reference}
+\label{class_private_message_panel}\index{PrivateMessagePanel@{PrivateMessagePanel}}
+
+
+{\ttfamily \#include $<$privatemessagepanel.\+h$>$}
+
+Inheritance diagram for Private\+Message\+Panel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_private_message_panel}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_private_message_panel_ad8f930587c61b7f60c091420f336b293}{friend\+List\+Item\+Changed}} (QList\+Widget\+Item $\ast$item)
+\item 
+void \mbox{\hyperlink{class_private_message_panel_ad472af00222132da60db183c84c9e166}{send\+Btn\+Click}} (QString receiver, QString message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_private_message_panel_a4f24cd77424c732cce2bc5d1fbd59ac4}{Private\+Message\+Panel}} (QWidget $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{class_private_message_panel_a1876597829dc64fda957e4c5edac533b}{$\sim$\+Private\+Message\+Panel}} () override
+\item 
+void \mbox{\hyperlink{class_private_message_panel_a404927cc951c2939a5956c6b6ce26fa4}{add\+Friend}} (class \mbox{\hyperlink{class_friend}{Friend}} user)
+\item 
+void \mbox{\hyperlink{class_private_message_panel_a2e84a54749683c853d85574ac75325bc}{add\+Message}} (class \mbox{\hyperlink{class_message}{Message}} message)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_private_message_panel_a4f24cd77424c732cce2bc5d1fbd59ac4}\label{class_private_message_panel_a4f24cd77424c732cce2bc5d1fbd59ac4}} 
+\index{PrivateMessagePanel@{PrivateMessagePanel}!PrivateMessagePanel@{PrivateMessagePanel}}
+\index{PrivateMessagePanel@{PrivateMessagePanel}!PrivateMessagePanel@{PrivateMessagePanel}}
+\doxysubsubsection{\texorpdfstring{PrivateMessagePanel()}{PrivateMessagePanel()}}
+{\footnotesize\ttfamily Private\+Message\+Panel\+::\+Private\+Message\+Panel (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em parent} & -\/ QObject parent for signals / slot \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_private_message_panel_a1876597829dc64fda957e4c5edac533b}\label{class_private_message_panel_a1876597829dc64fda957e4c5edac533b}} 
+\index{PrivateMessagePanel@{PrivateMessagePanel}!````~PrivateMessagePanel@{$\sim$PrivateMessagePanel}}
+\index{````~PrivateMessagePanel@{$\sim$PrivateMessagePanel}!PrivateMessagePanel@{PrivateMessagePanel}}
+\doxysubsubsection{\texorpdfstring{$\sim$PrivateMessagePanel()}{~PrivateMessagePanel()}}
+{\footnotesize\ttfamily Private\+Message\+Panel\+::$\sim$\+Private\+Message\+Panel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_private_message_panel_a404927cc951c2939a5956c6b6ce26fa4}\label{class_private_message_panel_a404927cc951c2939a5956c6b6ce26fa4}} 
+\index{PrivateMessagePanel@{PrivateMessagePanel}!addFriend@{addFriend}}
+\index{addFriend@{addFriend}!PrivateMessagePanel@{PrivateMessagePanel}}
+\doxysubsubsection{\texorpdfstring{addFriend()}{addFriend()}}
+{\footnotesize\ttfamily void Private\+Message\+Panel\+::add\+Friend (\begin{DoxyParamCaption}\item[{class \mbox{\hyperlink{class_friend}{Friend}}}]{user }\end{DoxyParamCaption})}
+
+Function for adding a friend to the friend\+View\+List 
+\begin{DoxyParams}{Parameters}
+{\em user} & -\/ \mbox{\hyperlink{class_friend}{Friend}} with user details \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_private_message_panel_a2e84a54749683c853d85574ac75325bc}\label{class_private_message_panel_a2e84a54749683c853d85574ac75325bc}} 
+\index{PrivateMessagePanel@{PrivateMessagePanel}!addMessage@{addMessage}}
+\index{addMessage@{addMessage}!PrivateMessagePanel@{PrivateMessagePanel}}
+\doxysubsubsection{\texorpdfstring{addMessage()}{addMessage()}}
+{\footnotesize\ttfamily void Private\+Message\+Panel\+::add\+Message (\begin{DoxyParamCaption}\item[{class \mbox{\hyperlink{class_message}{Message}}}]{message }\end{DoxyParamCaption})}
+
+Function for adding a message to the message window 
+\begin{DoxyParams}{Parameters}
+{\em message} & -\/ class \mbox{\hyperlink{class_message}{Message}} containing message details \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_private_message_panel_ad8f930587c61b7f60c091420f336b293}\label{class_private_message_panel_ad8f930587c61b7f60c091420f336b293}} 
+\index{PrivateMessagePanel@{PrivateMessagePanel}!friendListItemChanged@{friendListItemChanged}}
+\index{friendListItemChanged@{friendListItemChanged}!PrivateMessagePanel@{PrivateMessagePanel}}
+\doxysubsubsection{\texorpdfstring{friendListItemChanged}{friendListItemChanged}}
+{\footnotesize\ttfamily void Private\+Message\+Panel\+::friend\+List\+Item\+Changed (\begin{DoxyParamCaption}\item[{QList\+Widget\+Item $\ast$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_private_message_panel_ad472af00222132da60db183c84c9e166}\label{class_private_message_panel_ad472af00222132da60db183c84c9e166}} 
+\index{PrivateMessagePanel@{PrivateMessagePanel}!sendBtnClick@{sendBtnClick}}
+\index{sendBtnClick@{sendBtnClick}!PrivateMessagePanel@{PrivateMessagePanel}}
+\doxysubsubsection{\texorpdfstring{sendBtnClick}{sendBtnClick}}
+{\footnotesize\ttfamily void Private\+Message\+Panel\+::send\+Btn\+Click (\begin{DoxyParamCaption}\item[{QString}]{receiver,  }\item[{QString}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/ui-\/components/\mbox{\hyperlink{privatemessagepanel_8h}{privatemessagepanel.\+h}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/cmake-\/build-\/debug/\+Client\+\_\+autogen/\+XPLGEZ2\+AS2/\mbox{\hyperlink{cmake-build-debug_2_client__autogen_2_x_p_l_g_e_z2_a_s2_2moc__privatemessagepanel_8cpp}{moc\+\_\+privatemessagepanel.\+cpp}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/cmake-\/build-\/release/\+Client\+\_\+autogen/\+XPLGEZ2\+AS2/\mbox{\hyperlink{cmake-build-release_2_client__autogen_2_x_p_l_g_e_z2_a_s2_2moc__privatemessagepanel_8cpp}{moc\+\_\+privatemessagepanel.\+cpp}}\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/ui-\/components/\mbox{\hyperlink{privatemessagepanel_8cpp}{privatemessagepanel.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,44 @@
+\hypertarget{_data_printer_8h_source}{}\doxysection{Data\+Printer.\+h}
+\label{_data_printer_8h_source}\index{N:/GitHub/dt047g-\/project/server/data/DataPrinter.h@{N:/GitHub/dt047g-\/project/server/data/DataPrinter.h}}
+\mbox{\hyperlink{_data_printer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by jolof on 2022-\/01-\/10.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef SERVER\_DATAPRINTER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define SERVER\_DATAPRINTER\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <QFile>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}../datatypes/AbstractData.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}../datatypes/Message.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_data_printer}{DataPrinter}} \{}
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_data_printer_ab092440cd22c641e9b7f19c8b8f68240}{DataPrinter}}(QString path): path(path) \{\};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_data_printer_ac65f660f50cf080c71f4be2fb5137791}{save}}(\mbox{\hyperlink{class_abstract_data}{AbstractData}} \&data) \{}
+\DoxyCodeLine{18         \textcolor{keywordflow}{if}(path.open(QIODevice::WriteOnly)) \{}
+\DoxyCodeLine{19             QDataStream printer(\&path);}
+\DoxyCodeLine{20             printer << data;}
+\DoxyCodeLine{21         \}}
+\DoxyCodeLine{22         path.close();}
+\DoxyCodeLine{23     \};}
+\DoxyCodeLine{24     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_data_printer_a041ee75bb434b78d2cafb926a12f09fe}{save}}(\textcolor{keyword}{const} \textcolor{keyword}{class} \mbox{\hyperlink{class_message}{Message}} \&data, QString path) \{}
+\DoxyCodeLine{25         QFile \_path(path);}
+\DoxyCodeLine{26         \textcolor{keywordflow}{if}(\_path.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text)) \{}
+\DoxyCodeLine{27             QTextStream printer(\&\_path);}
+\DoxyCodeLine{28             printer << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{29             printer << data;}
+\DoxyCodeLine{30             \_path.close();}
+\DoxyCodeLine{31         \}}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33 \textcolor{keyword}{private}:}
+\DoxyCodeLine{34     QFile path;}
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//SERVER\_DATAPRINTER\_H}}
+
+\end{DoxyCode}

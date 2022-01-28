@@ -1,0 +1,112 @@
+\hypertarget{class_abstract_data}{}\doxysection{Abstract\+Data Class Reference}
+\label{class_abstract_data}\index{AbstractData@{AbstractData}}
+
+
+{\ttfamily \#include $<$Abstract\+Data.\+h$>$}
+
+Inheritance diagram for Abstract\+Data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_abstract_data}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_abstract_data_a56b808f1280c344b618d2885e95a2be8}{Abstract\+Data}} ()=default
+\item 
+virtual QData\+Stream \& \mbox{\hyperlink{class_abstract_data_a670be4481a377f9686a7fc108ced3458}{to\+Stream}} (QData\+Stream \&stream) const =0
+\item 
+virtual QData\+Stream \& \mbox{\hyperlink{class_abstract_data_a0084a715ed7aa36c622be557c66694bf}{from\+Stream}} (QData\+Stream \&stream)=0
+\item 
+virtual \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{Data\+Type}} \mbox{\hyperlink{class_abstract_data_ad03856778da3fafd0610017140790381}{type}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+QData\+Stream \& \mbox{\hyperlink{class_abstract_data_a44791111e0f7518a5ece923326cd347a}{operator$>$$>$}} (QData\+Stream \&ostream, \mbox{\hyperlink{class_abstract_data}{Abstract\+Data}} \&data)
+\item 
+QData\+Stream \& \mbox{\hyperlink{class_abstract_data_af8a627cfdf2046a7ad83c06cc86fef74}{operator$<$$<$}} (QData\+Stream \&istream, const \mbox{\hyperlink{class_abstract_data}{Abstract\+Data}} \&data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_abstract_data_a56b808f1280c344b618d2885e95a2be8}\label{class_abstract_data_a56b808f1280c344b618d2885e95a2be8}} 
+\index{AbstractData@{AbstractData}!AbstractData@{AbstractData}}
+\index{AbstractData@{AbstractData}!AbstractData@{AbstractData}}
+\doxysubsubsection{\texorpdfstring{AbstractData()}{AbstractData()}}
+{\footnotesize\ttfamily Abstract\+Data\+::\+Abstract\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_abstract_data_a0084a715ed7aa36c622be557c66694bf}\label{class_abstract_data_a0084a715ed7aa36c622be557c66694bf}} 
+\index{AbstractData@{AbstractData}!fromStream@{fromStream}}
+\index{fromStream@{fromStream}!AbstractData@{AbstractData}}
+\doxysubsubsection{\texorpdfstring{fromStream()}{fromStream()}}
+{\footnotesize\ttfamily virtual QData\+Stream \& Abstract\+Data\+::from\+Stream (\begin{DoxyParamCaption}\item[{QData\+Stream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_auth_answer_a39168c9c303e4649e4d67b52ed73f9e2}{Auth\+Answer}}, \mbox{\hyperlink{class_friend_a1624e964f5446609e3fdba8856d6445c}{Friend}}, \mbox{\hyperlink{class_friend_list_abda7881c5a0a8538db97e120393cefab}{Friend\+List}}, \mbox{\hyperlink{class_message_a0194170593f739ed8cbfdfbe9accb244}{Message}}, \mbox{\hyperlink{class_message_list_a24fd93d7c0fbe28ba25cd158b50c12ff}{Message\+List}}, and \mbox{\hyperlink{class_user_af99d4862187ffb4a819a004c41785103}{User}}.
+
+\mbox{\Hypertarget{class_abstract_data_a670be4481a377f9686a7fc108ced3458}\label{class_abstract_data_a670be4481a377f9686a7fc108ced3458}} 
+\index{AbstractData@{AbstractData}!toStream@{toStream}}
+\index{toStream@{toStream}!AbstractData@{AbstractData}}
+\doxysubsubsection{\texorpdfstring{toStream()}{toStream()}}
+{\footnotesize\ttfamily virtual QData\+Stream \& Abstract\+Data\+::to\+Stream (\begin{DoxyParamCaption}\item[{QData\+Stream \&}]{stream }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_auth_answer_a6c5a471473147699280772f460b67846}{Auth\+Answer}}, \mbox{\hyperlink{class_friend_ad64e30e8c7614d33f42e2ea6deb64b19}{Friend}}, \mbox{\hyperlink{class_friend_list_a53bcd6dc61df4d15b9603a148bd9a37f}{Friend\+List}}, \mbox{\hyperlink{class_message_a98993a14a7a727c9c75e067bd8735374}{Message}}, \mbox{\hyperlink{class_message_list_a6da9b5fe163393c7e972dec8992bb97a}{Message\+List}}, and \mbox{\hyperlink{class_user_a36b30c9971d6e3112ffcba5b625b42ea}{User}}.
+
+\mbox{\Hypertarget{class_abstract_data_ad03856778da3fafd0610017140790381}\label{class_abstract_data_ad03856778da3fafd0610017140790381}} 
+\index{AbstractData@{AbstractData}!type@{type}}
+\index{type@{type}!AbstractData@{AbstractData}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{Data\+Type}} Abstract\+Data\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_auth_answer_a44a608696e8896c848ae56140a4df258}{Auth\+Answer}}, \mbox{\hyperlink{class_friend_a9516f690c3c30e76bccc7650032057ee}{Friend}}, \mbox{\hyperlink{class_friend_list_ab805b03e21c101289a1ac20cc044af41}{Friend\+List}}, \mbox{\hyperlink{class_message_adf06911ff487020cd9416cb01f00fbf2}{Message}}, \mbox{\hyperlink{class_message_list_aa2a9eef321f6ee7bcfa652d72766ce37}{Message\+List}}, and \mbox{\hyperlink{class_user_ad4a5d1c160f008d7614574ee3f51306a}{User}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_abstract_data_af8a627cfdf2046a7ad83c06cc86fef74}\label{class_abstract_data_af8a627cfdf2046a7ad83c06cc86fef74}} 
+\index{AbstractData@{AbstractData}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!AbstractData@{AbstractData}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily QData\+Stream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{QData\+Stream \&}]{istream,  }\item[{const \mbox{\hyperlink{class_abstract_data}{Abstract\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Operator \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} overloading of QData\+Stream 
+\begin{DoxyParams}{Parameters}
+{\em ostream} & . QData\+Stream \\
+\hline
+{\em data} & -\/ \mbox{\hyperlink{class_abstract_data}{Abstract\+Data}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ returns QData\+Stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_abstract_data_a44791111e0f7518a5ece923326cd347a}\label{class_abstract_data_a44791111e0f7518a5ece923326cd347a}} 
+\index{AbstractData@{AbstractData}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!AbstractData@{AbstractData}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily QData\+Stream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{QData\+Stream \&}]{ostream,  }\item[{\mbox{\hyperlink{class_abstract_data}{Abstract\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Operator \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} overloading of QData\+Stream 
+\begin{DoxyParams}{Parameters}
+{\em istream} & . QData\+Stream \\
+\hline
+{\em data} & -\/ \mbox{\hyperlink{class_abstract_data}{Abstract\+Data}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ returns QData\+Stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+N\+:/\+Git\+Hub/dt047g-\/project/client/data/\mbox{\hyperlink{_abstract_data_8h}{Abstract\+Data.\+h}}\end{DoxyCompactItemize}

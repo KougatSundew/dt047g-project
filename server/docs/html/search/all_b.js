@@ -1,0 +1,16 @@
+var searchData=
+[
+  ['main_0',['main',['../cmake-build-debug_2_c_make_files_23_821_81_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../cmake-build-debug_2_c_make_files_23_821_81_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp'],['../cmake-build-release_2_c_make_files_23_821_81_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../cmake-build-release_2_c_make_files_23_821_81_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp'],['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp']]],
+  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['message_2',['Message',['../class_message.html',1,'Message'],['../class_message.html#a4e0c3e0a2be25186519ba075d7851b71',1,'Message::Message()=default'],['../class_message.html#ac3e7e818b4511f3512bffaa5f3b712fb',1,'Message::Message(const QString &amp;sender, const QString &amp;receiver, const QString &amp;message)'],['../_abstract_data_8h.html#a12d7fbed5e81dbb042ec635c6f1d2c88a2dfbf31ed014852927c31c352feac51f',1,'Message():&#160;AbstractData.h']]],
+  ['message_2ecpp_3',['Message.cpp',['../_message_8cpp.html',1,'']]],
+  ['message_2eh_4',['Message.h',['../_message_8h.html',1,'']]],
+  ['messagelist_5',['MessageList',['../class_message_list.html',1,'MessageList'],['../class_message_list.html#a2bf0246e8f2534c1f7159ae6507cf0d8',1,'MessageList::MessageList()=default'],['../class_message_list.html#af68ccd9d5248d326e4f47168def1bbff',1,'MessageList::MessageList(QVector&lt; class Message &gt; messages)'],['../_abstract_data_8h.html#a12d7fbed5e81dbb042ec635c6f1d2c88afb95bd74ceeb1cb8c30676b7ae45a65e',1,'MessageList():&#160;AbstractData.h']]],
+  ['messagelist_2ecpp_6',['MessageList.cpp',['../_message_list_8cpp.html',1,'']]],
+  ['messagelist_2eh_7',['MessageList.h',['../_message_list_8h.html',1,'']]],
+  ['messagereceived_8',['messageReceived',['../class_server_socket.html#a63888bca4dc900a4b57b1a2c91e27bdb',1,'ServerSocket']]],
+  ['moc_5fpredefs_2eh_9',['moc_predefs.h',['../cmake-build-debug_2server__autogen_2moc__predefs_8h.html',1,'(Global Namespace)'],['../cmake-build-release_2server__autogen_2moc__predefs_8h.html',1,'(Global Namespace)']]],
+  ['moc_5fserver_2ecpp_10',['moc_Server.cpp',['../cmake-build-debug_2server__autogen_2_e_w_i_e_g_a46_w_w_2moc___server_8cpp.html',1,'(Global Namespace)'],['../cmake-build-release_2server__autogen_2_e_w_i_e_g_a46_w_w_2moc___server_8cpp.html',1,'(Global Namespace)']]],
+  ['moc_5fserversocket_2ecpp_11',['moc_ServerSocket.cpp',['../cmake-build-debug_2server__autogen_2_e_w_i_e_g_a46_w_w_2moc___server_socket_8cpp.html',1,'(Global Namespace)'],['../cmake-build-release_2server__autogen_2_e_w_i_e_g_a46_w_w_2moc___server_socket_8cpp.html',1,'(Global Namespace)']]],
+  ['mocs_5fcompilation_2ecpp_12',['mocs_compilation.cpp',['../cmake-build-debug_2server__autogen_2mocs__compilation_8cpp.html',1,'(Global Namespace)'],['../cmake-build-release_2server__autogen_2mocs__compilation_8cpp.html',1,'(Global Namespace)']]]
+];

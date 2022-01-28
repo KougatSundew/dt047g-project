@@ -1,0 +1,62 @@
+\hypertarget{_client_8h_source}{}\doxysection{Client.\+h}
+\label{_client_8h_source}\index{N:/GitHub/dt047g-\/project/client/Client.h@{N:/GitHub/dt047g-\/project/client/Client.h}}
+\mbox{\hyperlink{_client_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Chatter, Programmeringsmetodik (DT047G)}}
+\DoxyCodeLine{3 \textcolor{comment}{// Joel Olofsson (jool1904)}}
+\DoxyCodeLine{4 \textcolor{comment}{// Client.h, 2021-\/12-\/29 -\/ 2021-\/01-\/11}}
+\DoxyCodeLine{5 \textcolor{comment}{// Contains the header definitions}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Created by jolof on 2021-\/12-\/29.}}
+\DoxyCodeLine{10 \textcolor{comment}{//}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef CLIENT\_CLIENT\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define CLIENT\_CLIENT\_H}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <QObject>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <QHostAddress>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <QTcpSocket>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <QDataStream>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <QJsonObject>}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <QJsonDocument>}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_abstract_data_8h}{data/AbstractData.h}}"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_message_8h}{data/Message.h}}"{}}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_user_8h}{data/User.h}}"{}}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_auth_answer_8h}{data/AuthAnswer.h}}"{}}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{class }\mbox{\hyperlink{class_client}{Client}} : \textcolor{keyword}{public} QObject \{}
+\DoxyCodeLine{30     Q\_OBJECT}
+\DoxyCodeLine{31 \textcolor{keyword}{public}:}
+\DoxyCodeLine{32     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_client_a4b165cbaa91e8fb11cbef6c6b952e35c}{Client}}(QObject *parent = \textcolor{keyword}{nullptr}, QHostAddress ip = QHostAddress::Null, \textcolor{keywordtype}{int} port = 0);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_a3f6ac9034229bb5d9baf22a4fd0be98d}{abort}}();}
+\DoxyCodeLine{35     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_client_a49d3302c32998093ad49aefc93b931b5}{isSocketConnected}}();}
+\DoxyCodeLine{36 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} onReadyRead();}
+\DoxyCodeLine{38 signals:}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_ac2cdeb8b0249c1bf0ddd2167da861ad4}{disconnected}}();}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_a5f3de6434245dc99ceac8601806cb6b1}{connected}}();}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_af1d9e3a1cafb892bcef869dc6f982fc9}{messageReceived}}(QDataStream \&stream);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_a07e9a3cc2d00cf68b86c255de4351641}{authReceived}}(QDataStream \&stream);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_a2c294c1aec67be8a68b46435aa3eb940}{friendListReceived}}(QDataStream \&stream);}
+\DoxyCodeLine{44 \textcolor{keyword}{public} slots:}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_a484b660517d6a610b6733bee7e96cb8c}{connectToServer}}(\textcolor{keyword}{const} QHostAddress \&address, \textcolor{keywordtype}{int} port);}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_a484b660517d6a610b6733bee7e96cb8c}{connectToServer}}();}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_a668b69c42a1f8c46424b4eff0d484e38}{write}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_abstract_data}{AbstractData}} \&data);}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_client_a43ffca98bbbceba21e56b5af97586498}{disconnectFromServer}}();}
+\DoxyCodeLine{49 \textcolor{keyword}{private}:}
+\DoxyCodeLine{50     QHostAddress m\_ip; \textcolor{keywordtype}{int} m\_port;}
+\DoxyCodeLine{51     std::unique\_ptr<QTcpSocket> m\_clientSocket;}
+\DoxyCodeLine{52     \textcolor{keywordtype}{bool} m\_connected;}
+\DoxyCodeLine{53 \};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CLIENT\_CLIENT\_H}}
+
+\end{DoxyCode}

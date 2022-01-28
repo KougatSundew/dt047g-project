@@ -1,0 +1,47 @@
+\hypertarget{_user_8h_source}{}\doxysection{User.\+h}
+\label{_user_8h_source}\index{N:/GitHub/dt047g-\/project/client/data/User.h@{N:/GitHub/dt047g-\/project/client/data/User.h}}
+\mbox{\hyperlink{_user_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Chatter, Programmeringsmetodik (DT047G)}}
+\DoxyCodeLine{3 \textcolor{comment}{// Joel Olofsson (jool1904)}}
+\DoxyCodeLine{4 \textcolor{comment}{// User.h, 2022-\/01-\/04 -\/ 2022-\/01-\/10}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 \textcolor{comment}{// Created by jolof on 2022-\/01-\/04.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef CLIENT\_USER\_H}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define CLIENT\_USER\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_abstract_data_8h}{AbstractData.h}}"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_user}{User}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_abstract_data}{AbstractData}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_user_a4dd5fde1b81bb132994a67f27bc203d1}{User}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_user_aaa3511c1b1ed9dd40eca9227ed384e48}{User}}(\textcolor{keyword}{const} QString \&username, \textcolor{keyword}{const} QString \&password): username(username), password(password), currentType(\mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{DataType}}::\mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88ac0bbecd096aa5dd9b0cad289c4042f59}{OFFLINE}}), isLoggedIn(false) \{\};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_a3ff12162238cf1b18827800f790c42ea}{setUsername}}(\textcolor{keyword}{const} QString \&username);}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_aaef2e67dfc0be2d432bb5f554758964f}{setPassword}}(\textcolor{keyword}{const} QString \&password);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_a74112873ee92dad6e6ce9c2030764e85}{setType}}(\textcolor{keyword}{const} \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{DataType}} \&\mbox{\hyperlink{class_user_ad4a5d1c160f008d7614574ee3f51306a}{type}});}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_a39a6440ed91ecef6cb5b4e41554ceccd}{setIsLoggedIn}}(\textcolor{keyword}{const} \textcolor{keywordtype}{bool} \&isLoggedIn);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     [[nodiscard]] QString \mbox{\hyperlink{class_user_a1c9ee5527f563fb644e0ad6bbab79f41}{getUsername}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{25     [[nodiscard]] QString \mbox{\hyperlink{class_user_a0479f7f168b8ec592ecc1ea9f95d0868}{getPassword}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{26     [[nodiscard]] \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_user_a80646bd469a96b719ecd9fed33cf743f}{getIsLoggedIn}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     QDataStream\& \mbox{\hyperlink{class_user_a36b30c9971d6e3112ffcba5b625b42ea}{toStream}}(QDataStream \&stream) \textcolor{keyword}{const override};}
+\DoxyCodeLine{29     QDataStream\& \mbox{\hyperlink{class_user_af99d4862187ffb4a819a004c41785103}{fromStream}}(QDataStream \&stream) \textcolor{keyword}{override};}
+\DoxyCodeLine{30     [[nodiscard]] \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{DataType}} \mbox{\hyperlink{class_user_ad4a5d1c160f008d7614574ee3f51306a}{type}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{31 \textcolor{keyword}{private}:}
+\DoxyCodeLine{32     QString username;}
+\DoxyCodeLine{33     QString password;}
+\DoxyCodeLine{34     \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{DataType}} currentType;}
+\DoxyCodeLine{35     \textcolor{keywordtype}{bool} isLoggedIn;}
+\DoxyCodeLine{36 \};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{comment}{// Compare order for UserData if it is a key in QMap}}
+\DoxyCodeLine{39 \textcolor{keywordtype}{bool} \mbox{\hyperlink{_user_8h_a7e6efb0198b56b0897de272e6c2e41a5}{operator <}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_user}{User}} \&tmp1, \textcolor{keyword}{const} \mbox{\hyperlink{class_user}{User}} \&tmp2);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CLIENT\_USER\_H}}
+
+\end{DoxyCode}

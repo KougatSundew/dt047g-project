@@ -1,0 +1,47 @@
+\hypertarget{_message_8h_source}{}\doxysection{Message.\+h}
+\label{_message_8h_source}\index{N:/GitHub/dt047g-\/project/client/data/Message.h@{N:/GitHub/dt047g-\/project/client/data/Message.h}}
+\mbox{\hyperlink{_message_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by jolof on 2022-\/01-\/04.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef SERVER\_MESSAGE\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define SERVER\_MESSAGE\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_abstract_data_8h}{AbstractData.h}}"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_message}{Message}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_abstract_data}{AbstractData}} \{}
+\DoxyCodeLine{10     QString sender;}
+\DoxyCodeLine{11     QString receiver;}
+\DoxyCodeLine{12     QString message;}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_message_a4e0c3e0a2be25186519ba075d7851b71}{Message}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_message_a4e0c3e0a2be25186519ba075d7851b71}{Message}}(\textcolor{keyword}{const} QString \&sender, \textcolor{keyword}{const} QString \&receiver, \textcolor{keyword}{const} QString \&message);}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keyword}{virtual} QDataStream\& \mbox{\hyperlink{class_message_a98993a14a7a727c9c75e067bd8735374}{toStream}}(QDataStream \&stream) \textcolor{keyword}{const override};}
+\DoxyCodeLine{18     \textcolor{keyword}{virtual} QDataStream\& \mbox{\hyperlink{class_message_a0194170593f739ed8cbfdfbe9accb244}{fromStream}}(QDataStream \&stream) \textcolor{keyword}{override};}
+\DoxyCodeLine{19     \textcolor{keyword}{virtual} \mbox{\hyperlink{_abstract_data_8h_a12d7fbed5e81dbb042ec635c6f1d2c88}{DataType}} \mbox{\hyperlink{class_message_adf06911ff487020cd9416cb01f00fbf2}{type}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keyword}{friend} QTextStream \&\mbox{\hyperlink{class_message_ac1f0a57c88baaa2d0b997d36e7a5641d}{operator >> }}(QTextStream \&stream, \textcolor{keyword}{class} \mbox{\hyperlink{class_message}{Message}}  \&data);}
+\DoxyCodeLine{22     \textcolor{keyword}{friend} QTextStream \&\mbox{\hyperlink{class_message_af5b8364b1ca87ec7353aeac62cb123dc}{operator << }}(QTextStream \&stream, \textcolor{keyword}{const} \textcolor{keyword}{class} \mbox{\hyperlink{class_message}{Message}}  \&data);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     QTextStream\& \mbox{\hyperlink{class_message_a98993a14a7a727c9c75e067bd8735374}{toStream}}(QTextStream \&stream) \textcolor{keyword}{const};}
+\DoxyCodeLine{25     QTextStream\& \mbox{\hyperlink{class_message_a0194170593f739ed8cbfdfbe9accb244}{fromStream}}(QTextStream \&stream);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{//Getters \& setters}}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_message_a5f848a38d7fa4e7cca49887a9567dc90}{setSender}}(\textcolor{keyword}{const} QString \&sender);}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_message_a912ccb7af7863f4d9f30deebb9ed2d73}{setReceiver}}(\textcolor{keyword}{const} QString \&receiver);}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_message_af2f74d1087265cb42b4857fa921ee394}{setMessage}}(\textcolor{keyword}{const} QString \&message);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     QString \mbox{\hyperlink{class_message_af512b41449d2ae54fb90d309991f7b50}{getSender}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{33     QString \mbox{\hyperlink{class_message_af293ca36182c170033590cb05bf63e13}{getReceiver}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{34     QString \mbox{\hyperlink{class_message_a5b5a717e3ce85f99f7d96c4936a839cb}{getMessage}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 QTextStream \&\mbox{\hyperlink{_message_8h_a2bd09e84509df528a7e90dd1ba02585c}{operator >> }}(QTextStream \&stream, \mbox{\hyperlink{class_abstract_data}{AbstractData}} \&data);}
+\DoxyCodeLine{38 QTextStream \&\mbox{\hyperlink{_message_8h_a3c2ebab8aa32af00a218504a576282b6}{operator << }}(QTextStream \&stream, \mbox{\hyperlink{class_abstract_data}{AbstractData}} \&data);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//SERVER\_MESSAGE\_H}}
+
+\end{DoxyCode}
